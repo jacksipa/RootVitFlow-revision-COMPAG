@@ -1,0 +1,42 @@
+{
+  "model": "mobilenetv2",
+  "seed": 1337,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 9,
+  "best_val_acc": 0.800000011920929,
+  "final_train_acc": 0.9700000286102295,
+  "train_time_s": 115.7,
+  "n_params": 2422722,
+  "n_train": 100,
+  "n_val": 20,
+  "n_test": 20,
+  "scheme": "plant_cv",
+  "rep": 1,
+  "fold": 3,
+  "test_plants": [
+    "rb9",
+    "sb16"
+  ],
+  "val_plants": [
+    "rb7",
+    "sb11"
+  ],
+  "val_acc_best_ckpt": 0.8,
+  "test_metrics": {
+    "accuracy": 0.55,
+    "balanced_accuracy": 0.55,
+    "precision_macro": 0.5980392156862745,
+    "recall_macro": 0.55,
+    "f1_macro": 0.48717948717948717,
+    "recall_riego": 0.9,
+    "recall_sequia": 0.2,
+    "auc": 0.65,
+    "tn": 9,
+    "fp": 1,
+    "fn": 8,
+    "tp": 2,
+    "plant_accuracy": 0.5,
+    "n_plants": 2
+  }
+}

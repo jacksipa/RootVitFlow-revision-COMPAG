@@ -1,0 +1,130 @@
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+[unet] train=115 val=25 test=60 patch=512 bs=8 lr=0.001
+/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/seg_benchmark.py:233: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  log.append({"iter": it, "loss": float(loss), "val_dice_patches": vd, "minutes": (time.time() - t0) / 60})
+  it 250 loss 0.8591 val_dice 0.4739 (0.2 min)
+  it 500 loss 0.5603 val_dice 0.5250 (0.4 min)
+  it 750 loss 0.3792 val_dice 0.5490 (0.6 min)
+  it 1000 loss 0.3367 val_dice 0.5636 (0.9 min)
+  it 1250 loss 0.6477 val_dice 0.5639 (1.1 min)
+  it 1500 loss 0.5058 val_dice 0.5502 (1.3 min)
+  it 1750 loss 0.4382 val_dice 0.5639 (1.5 min)
+  it 2000 loss 0.3816 val_dice 0.5545 (1.7 min)
+  it 2250 loss 0.3848 val_dice 0.5670 (1.9 min)
+  it 2500 loss 0.4991 val_dice 0.5724 (2.1 min)
+  it 2750 loss 0.4568 val_dice 0.5792 (2.3 min)
+  it 3000 loss 0.4414 val_dice 0.5679 (2.5 min)
+  it 3250 loss 0.4485 val_dice 0.5631 (2.8 min)
+  it 3500 loss 0.6604 val_dice 0.5719 (3.0 min)
+  it 3750 loss 0.2686 val_dice 0.5720 (3.2 min)
+  it 4000 loss 0.5031 val_dice 0.5785 (3.4 min)
+  it 4250 loss 0.3809 val_dice 0.5775 (3.6 min)
+  it 4500 loss 0.3438 val_dice 0.5758 (3.9 min)
+  it 4750 loss 0.2605 val_dice 0.5764 (4.1 min)
+  it 5000 loss 0.6235 val_dice 0.5755 (4.3 min)
+  it 5250 loss 0.2886 val_dice 0.5762 (4.5 min)
+  it 5500 loss 0.2701 val_dice 0.5735 (4.7 min)
+  it 5750 loss 0.4554 val_dice 0.5768 (5.0 min)
+  it 6000 loss 0.3893 val_dice 0.5793 (5.2 min)
+  it 6250 loss 0.2647 val_dice 0.5753 (5.4 min)
+  it 6500 loss 0.4693 val_dice 0.5789 (5.7 min)
+  it 6750 loss 0.4665 val_dice 0.5790 (5.9 min)
+  it 7000 loss 0.2887 val_dice 0.5783 (6.1 min)
+  it 7250 loss 0.3325 val_dice 0.5779 (6.4 min)
+  it 7500 loss 0.4077 val_dice 0.5789 (6.6 min)
+  it 7750 loss 0.5708 val_dice 0.5791 (6.8 min)
+  it 8000 loss 0.5262 val_dice 0.5791 (7.0 min)
+/home/semilleroia/miniconda3/envs/rootseg/lib/python3.11/site-packages/monai/inferers/utils.py:226: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  win_data = torch.cat([inputs[win_slice] for win_slice in unravel_slice]).to(sw_device)
+/home/semilleroia/miniconda3/envs/rootseg/lib/python3.11/site-packages/monai/inferers/utils.py:370: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  out[idx_zm] += p
+  test rb3_16_07_25: dice=0.688 cldice=0.779 skelF1=0.614
+  test rb3_17_07_25: dice=0.723 cldice=0.853 skelF1=0.686
+  test rb3_18_07_25: dice=0.713 cldice=0.838 skelF1=0.624
+  test rb3_19_07_25: dice=0.731 cldice=0.851 skelF1=0.646
+  test rb3_20_07_25: dice=0.726 cldice=0.846 skelF1=0.667
+  test rb3_21_07_25: dice=0.767 cldice=0.873 skelF1=0.706
+  test rb3_22_07_25: dice=0.743 cldice=0.876 skelF1=0.695
+  test rb3_23_07_25: dice=0.679 cldice=0.792 skelF1=0.580
+  test rb3_24_07_25: dice=0.709 cldice=0.850 skelF1=0.623
+  test rb3_25_07_25: dice=0.715 cldice=0.841 skelF1=0.637
+  test rb3_26_07_25: dice=0.737 cldice=0.870 skelF1=0.694
+  test rb3_27_07_25: dice=0.742 cldice=0.888 skelF1=0.642
+  test rb3_28_07_25: dice=0.711 cldice=0.836 skelF1=0.605
+  test rb3_29_07_25: dice=0.713 cldice=0.849 skelF1=0.626
+  test rb3_30_07_25: dice=0.742 cldice=0.890 skelF1=0.672
+  test rb8_16_07_25: dice=0.654 cldice=0.787 skelF1=0.591
+  test rb8_17_07_25: dice=0.735 cldice=0.861 skelF1=0.666
+  test rb8_18_07_25: dice=0.712 cldice=0.843 skelF1=0.608
+  test rb8_19_07_25: dice=0.739 cldice=0.881 skelF1=0.673
+  test rb8_20_07_25: dice=0.725 cldice=0.865 skelF1=0.632
+  test rb8_21_07_25: dice=0.748 cldice=0.909 skelF1=0.657
+  test rb8_22_07_25: dice=0.759 cldice=0.896 skelF1=0.711
+  test rb8_23_07_25: dice=0.755 cldice=0.900 skelF1=0.663
+  test rb8_24_07_25: dice=0.743 cldice=0.887 skelF1=0.663
+  test rb8_25_07_25: dice=0.722 cldice=0.863 skelF1=0.627
+  test rb8_26_07_25: dice=0.739 cldice=0.854 skelF1=0.662
+  test rb8_27_07_25: dice=0.728 cldice=0.864 skelF1=0.682
+  test rb8_28_07_25: dice=0.732 cldice=0.869 skelF1=0.711
+  test rb8_29_07_25: dice=0.656 cldice=0.782 skelF1=0.568
+  test rb8_30_07_25: dice=0.699 cldice=0.835 skelF1=0.607
+  test sb13_16_07_25: dice=0.664 cldice=0.785 skelF1=0.561
+  test sb13_17_07_25: dice=0.742 cldice=0.864 skelF1=0.702
+  test sb13_18_07_25: dice=0.689 cldice=0.805 skelF1=0.583
+  test sb13_19_07_25: dice=0.687 cldice=0.795 skelF1=0.596
+  test sb13_20_07_25: dice=0.652 cldice=0.774 skelF1=0.469
+  test sb13_21_07_25: dice=0.709 cldice=0.820 skelF1=0.629
+  test sb13_22_07_25: dice=0.720 cldice=0.853 skelF1=0.619
+  test sb13_23_07_25: dice=0.686 cldice=0.800 skelF1=0.577
+  test sb13_24_07_25: dice=0.742 cldice=0.871 skelF1=0.699
+  test sb13_25_07_25: dice=0.692 cldice=0.813 skelF1=0.609
+  test sb13_26_07_25: dice=0.731 cldice=0.853 skelF1=0.697
+  test sb13_27_07_25: dice=0.666 cldice=0.774 skelF1=0.564
+  test sb13_28_07_25: dice=0.704 cldice=0.839 skelF1=0.605
+  test sb13_29_07_25: dice=0.613 cldice=0.706 skelF1=0.472
+  test sb13_30_07_35: dice=0.643 cldice=0.743 skelF1=0.556
+  test sb15_16_07_25: dice=0.628 cldice=0.734 skelF1=0.443
+  test sb15_17_07_25: dice=0.576 cldice=0.661 skelF1=0.475
+  test sb15_18_07_25: dice=0.764 cldice=0.907 skelF1=0.751
+  test sb15_19_07_95: dice=0.663 cldice=0.777 skelF1=0.567
+  test sb15_20_07_25: dice=0.690 cldice=0.799 skelF1=0.605
+  test sb15_21_07_25: dice=0.660 cldice=0.777 skelF1=0.553
+  test sb15_22_07_25: dice=0.670 cldice=0.776 skelF1=0.615
+  test sb15_23_07_25: dice=0.696 cldice=0.821 skelF1=0.578
+  test sb15_24_07_25: dice=0.717 cldice=0.868 skelF1=0.638
+  test sb15_25_07_25: dice=0.712 cldice=0.839 skelF1=0.620
+  test sb15_26_07_25: dice=0.684 cldice=0.830 skelF1=0.545
+  test sb15_27_07_25: dice=0.660 cldice=0.766 skelF1=0.563
+  test sb15_28_07_25: dice=0.696 cldice=0.827 skelF1=0.569
+  test sb15_29_07_25: dice=0.690 cldice=0.816 skelF1=0.594
+  test sb15_30_07_25: dice=0.681 cldice=0.821 skelF1=0.522
+{
+  "model": "unet",
+  "best_iter": 6000,
+  "best_val_dice_patches": 0.5792680200164466,
+  "train_minutes": 7.0,
+  "iters_done": 8000,
+  "patch": 512,
+  "batch": 8,
+  "lr": 0.001,
+  "n_params_trainable": 1625737,
+  "dice_mean": 0.7035106521636807,
+  "iou_mean": 0.5439519717187342,
+  "precision_mean": 0.6581572321983681,
+  "recall_mean": 0.7622470707990593,
+  "cldice_mean": 0.8290076124423439,
+  "skel_precision_mean": 0.5856277086885865,
+  "skel_recall_mean": 0.6551572733702725,
+  "skel_f1_mean": 0.6168970035419538,
+  "empty_pred_mean": 0.0,
+  "dice_sd": 0.038722131858919207,
+  "iou_sd": 0.04513836517702713,
+  "precision_sd": 0.06675006894180109,
+  "recall_sd": 0.04366022966883584,
+  "cldice_sd": 0.05015908360711043,
+  "skel_precision_sd": 0.07620001721801904,
+  "skel_recall_sd": 0.06138130874197289,
+  "skel_f1_sd": 0.06467812798244384,
+  "empty_pred_sd": 0.0
+}

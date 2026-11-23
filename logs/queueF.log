@@ -1,0 +1,285 @@
+=============== rootcvt_notransf / holdout  lun 23 nov 2026 18:19:29 -05 ===============
+[RUN] rootcvt_notransf holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+   -> test acc=0.300 auc=0.188 best_ep=1 val=0.600 t=229.8s
+[RUN] rootcvt_notransf holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+   -> test acc=0.267 auc=0.187 best_ep=9 val=0.840 t=181.4s
+[RUN] rootcvt_notransf holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+   -> test acc=0.383 auc=0.181 best_ep=4 val=0.920 t=177.3s
+=============== rootcvt_7b / holdout  lun 23 nov 2026 18:29:39 -05 ===============
+[RUN] rootcvt_7b holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node model/batch_normalization_1/FusedBatchNormV3 defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 597, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 990, in _fused_batch_norm
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/control_flow_util.py", line 108, in smart_cond
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 964, in _fused_batch_norm_training
+
+OOM when allocating tensor with shape[16,64,112,112] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/batch_normalization_1/FusedBatchNormV3}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_30373]
+=============== rootcvt_notransf / plant_cv  lun 23 nov 2026 18:30:08 -05 ===============
+[RUN] rootcvt_notransf plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node model/batch_normalization_2/FusedBatchNormV3 defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 597, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 990, in _fused_batch_norm
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/control_flow_util.py", line 108, in smart_cond
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 964, in _fused_batch_norm_training
+
+OOM when allocating tensor with shape[16,64,112,112] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/batch_normalization_2/FusedBatchNormV3}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_19024]
+=============== rootcvt_7b / plant_cv  lun 23 nov 2026 18:30:31 -05 ===============
+[RUN] rootcvt_7b plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node model/batch_normalization_2/FusedBatchNormV3 defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 597, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 990, in _fused_batch_norm
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/control_flow_util.py", line 108, in smart_cond
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 964, in _fused_batch_norm_training
+
+OOM when allocating tensor with shape[16,64,112,112] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/batch_normalization_2/FusedBatchNormV3}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_30373]
+=============== rootcvt / holdout  lun 23 nov 2026 18:31:00 -05 ===============
+[RUN] rootcvt holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node model/batch_normalization_2/FusedBatchNormV3 defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 597, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 990, in _fused_batch_norm
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/control_flow_util.py", line 108, in smart_cond
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/normalization/batch_normalization.py", line 964, in _fused_batch_norm_training
+
+OOM when allocating tensor with shape[16,64,112,112] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/batch_normalization_2/FusedBatchNormV3}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_32878]
+=============== COLA TERMINADA lun 23 nov 2026 18:31:31 -05 ===============

@@ -1,0 +1,24 @@
+{
+  "seed": 2026,
+  "holdout_plants": [
+    "rb3",
+    "rb8",
+    "sb13",
+    "sb15"
+  ],
+  "dev_plants": [
+    "rb1",
+    "rb4",
+    "rb6",
+    "rb7",
+    "rb9",
+    "rb10",
+    "sb11",
+    "sb12",
+    "sb14",
+    "sb16",
+    "sb19",
+    "sb20"
+  ],
+  "n_holdout_images": 60
+}

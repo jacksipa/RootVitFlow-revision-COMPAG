@@ -1,0 +1,10 @@
+# Pesos de modelos (≈2 GB) y datos del dataset: no se suben
+*.h5
+*.hdf5
+*.pt
+*.npy
+cache/
+*.zip
+__pycache__/
+*.lock
+skip/

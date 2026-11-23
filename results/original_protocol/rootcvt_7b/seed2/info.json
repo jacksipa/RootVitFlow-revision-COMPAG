@@ -1,0 +1,29 @@
+{
+  "model": "rootcvt_7b",
+  "seed": 1236,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 24,
+  "best_val_acc": 0.7250000238418579,
+  "final_train_acc": 0.6187499761581421,
+  "train_time_s": 87.1,
+  "n_params": 5450700,
+  "n_train": 160,
+  "n_val": 40,
+  "n_test": 40,
+  "test_metrics": {
+    "accuracy": 0.725,
+    "balanced_accuracy": 0.725,
+    "precision_macro": 0.8225806451612903,
+    "recall_macro": 0.725,
+    "f1_macro": 0.7025016903313049,
+    "recall_riego": 1.0,
+    "recall_sequia": 0.45,
+    "auc": 0.795,
+    "tn": 20,
+    "fp": 0,
+    "fn": 11,
+    "tp": 9
+  },
+  "note": "val = test (protocolo original, optimista por construcci\u00f3n)"
+}

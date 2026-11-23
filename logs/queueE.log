@@ -1,0 +1,184 @@
+=============== densenet201 / holdout  lun 23 nov 2026 18:19:29 -05 ===============
+[RUN] densenet201 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.NotFoundError: Graph execution error:
+
+Detected at node DenseNet201_root/densenet201/conv4_block19_1_conv/Conv2D defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1147, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 588, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 534, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/functional.py", line 692, in _run_internal_graph
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/base_layer.py", line 1155, in __call__
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 96, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/convolutional/base_conv.py", line 289, in call
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/layers/convolutional/base_conv.py", line 261, in convolution_op
+
+No algorithm worked!  Error messages:
+  Profiling failure on CUDNN engine eng1{}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16.00MiB. [tf-allocator-allocation-error='']
+  Profiling failure on CUDNN engine eng28{}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16.00MiB. [tf-allocator-allocation-error='']
+  Profiling failure on CUDNN engine eng0{}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16.00MiB. [tf-allocator-allocation-error='']
+  Profiling failure on CUDNN engine eng71{}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 27.48MiB. [tf-allocator-allocation-error='']
+  Profiling failure on CUDNN engine eng3{k11=0}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 279.66MiB. [tf-allocator-allocation-error='']
+  Profiling failure on CUDNN engine eng4{}: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 57.70MiB. [tf-allocator-allocation-error='']
+	 [[{{node DenseNet201_root/densenet201/conv4_block19_1_conv/Conv2D}}]] [Op:__inference_train_function_105089]
+=============== resnet50 / holdout  lun 23 nov 2026 18:20:43 -05 ===============
+[RUN] resnet50 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node Adam/mul_353 defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1151, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 623, in minimize
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 1309, in apply_gradients
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 729, in apply_gradients
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 1328, in _apply_weight_decay
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 1324, in distributed_apply_weight_decay
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 1321, in weight_decay_fn
+
+failed to allocate memory
+	 [[{{node Adam/mul_353}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_36729]
+=============== inceptionv3 / holdout  lun 23 nov 2026 18:23:07 -05 ===============
+[RUN] inceptionv3 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+   -> test acc=0.550 auc=0.486 best_ep=12 val=0.760 t=261.6s
+[RUN] inceptionv3 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+Traceback (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+    main()
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+    p_te, p_va, info = C.train_and_predict(
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+    hist = model.fit(X_tr, to_onehot(y_tr), epochs=epochs, batch_size=batch_size,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node gradient_tape/InceptionV3_root/inception_v3/conv2d_85/Conv2D/Conv2DBackpropFilter defined at (most recent call last):
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 81, in <module>
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/run_exp.py", line 60, in main
+
+  File "/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/common.py", line 302, in train_and_predict
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/utils/traceback_utils.py", line 65, in error_handler
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1804, in fit
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1398, in train_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1381, in step_function
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1370, in run_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/engine/training.py", line 1151, in train_step
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 622, in minimize
+
+  File "/home/semilleroia/miniconda3/envs/rootcvt/lib/python3.11/site-packages/tf_keras/src/optimizers/optimizer.py", line 280, in compute_gradients
+
+OOM when allocating tensor with shape[320,2048,1,1] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node gradient_tape/InceptionV3_root/inception_v3/conv2d_85/Conv2D/Conv2DBackpropFilter}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_95572]
+=============== mobilenetv2 / holdout  lun 23 nov 2026 18:29:18 -05 ===============

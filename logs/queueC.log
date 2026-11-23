@@ -1,0 +1,28 @@
+=============== mobilenetv2 / plant_cv  lun 23 nov 2026 17:55:39 -05 ===============
+[RUN] mobilenetv2 plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+   -> test acc=0.150 auc=0.050 best_ep=56 val=0.867 t=111.8s
+[RUN] mobilenetv2 plant_cv rep0 fold1 seed=1235 train=90 val=20 test=30
+   -> test acc=0.833 auc=0.969 best_ep=73 val=0.800 t=102.2s
+[RUN] mobilenetv2 plant_cv rep0 fold2 seed=1236 train=100 val=20 test=20
+   -> test acc=0.000 auc=0.000 best_ep=3 val=0.850 t=122.6s
+[RUN] mobilenetv2 plant_cv rep0 fold3 seed=1237 train=95 val=25 test=20
+   -> test acc=0.500 auc=0.840 best_ep=1 val=0.600 t=100.8s
+[RUN] mobilenetv2 plant_cv rep0 fold4 seed=1238 train=90 val=25 test=25
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e6da14befc0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+   -> test acc=0.200 auc=0.040 best_ep=31 val=0.600 t=110.9s
+[RUN] mobilenetv2 plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e6e24979120> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+   -> test acc=0.520 auc=0.407 best_ep=1 val=0.550 t=113.2s
+[RUN] mobilenetv2 plant_cv rep1 fold0 seed=1334 train=85 val=25 test=30
+   -> test acc=0.467 auc=0.627 best_ep=15 val=0.680 t=102.6s
+[RUN] mobilenetv2 plant_cv rep1 fold1 seed=1335 train=95 val=20 test=25
+   -> test acc=0.400 auc=0.473 best_ep=49 val=1.000 t=115.9s
+[RUN] mobilenetv2 plant_cv rep1 fold2 seed=1336 train=100 val=20 test=20
+   -> test acc=0.850 auc=0.990 best_ep=19 val=0.750 t=117.7s
+[RUN] mobilenetv2 plant_cv rep1 fold3 seed=1337 train=100 val=20 test=20
+   -> test acc=0.550 auc=0.650 best_ep=9 val=0.800 t=115.7s
+[RUN] mobilenetv2 plant_cv rep1 fold4 seed=1338 train=95 val=25 test=20
+   -> test acc=0.450 auc=0.260 best_ep=128 val=0.840 t=109.9s
+[RUN] mobilenetv2 plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
+   -> test acc=0.560 auc=0.600 best_ep=26 val=1.000 t=123.8s
+=============== inceptionv3 / plant_cv  lun 23 nov 2026 18:19:20 -05 ===============
