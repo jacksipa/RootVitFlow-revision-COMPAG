@@ -1,1 +1,40 @@
 =============== rootcvt / plant_cv  lun 23 nov 2026 17:55:39 -05 ===============
+[RUN] rootcvt plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.350 auc=0.400 best_ep=2 val=0.933 t=183.3s
+[RUN] rootcvt plant_cv rep0 fold1 seed=1235 train=90 val=20 test=30
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.567 auc=0.582 best_ep=13 val=0.850 t=172.6s
+[RUN] rootcvt plant_cv rep0 fold2 seed=1236 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.750 auc=0.760 best_ep=39 val=0.850 t=196.7s
+[RUN] rootcvt plant_cv rep0 fold3 seed=1237 train=95 val=25 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.700 auc=0.840 best_ep=2 val=0.680 t=186.3s
+[RUN] rootcvt plant_cv rep0 fold4 seed=1238 train=90 val=25 test=25
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e52e137c2c0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.360 auc=0.053 best_ep=35 val=0.600 t=179.1s
+[RUN] rootcvt plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e537c4f7a60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.600 auc=0.780 best_ep=17 val=0.800 t=184.4s
+[RUN] rootcvt plant_cv rep1 fold0 seed=1334 train=85 val=25 test=30
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.167 auc=0.089 best_ep=23 val=0.680 t=206.3s
+[RUN] rootcvt plant_cv rep1 fold1 seed=1335 train=95 val=20 test=25
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.440 auc=0.773 best_ep=20 val=0.850 t=356.5s
+[RUN] rootcvt plant_cv rep1 fold2 seed=1336 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.400 auc=0.510 best_ep=145 val=0.950 t=365.9s
+[RUN] rootcvt plant_cv rep1 fold3 seed=1337 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.150 auc=0.070 best_ep=8 val=0.950 t=284.7s
+[RUN] rootcvt plant_cv rep1 fold4 seed=1338 train=95 val=25 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.500 auc=0.070 best_ep=3 val=0.800 t=245.8s
+[RUN] rootcvt plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.640 auc=0.293 best_ep=91 val=0.833 t=240.0s
+=============== rootcvt / holdout  lun 23 nov 2026 18:43:23 -05 ===============

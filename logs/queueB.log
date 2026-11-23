@@ -1,1 +1,44 @@
 =============== rootcvt / image_cv  lun 23 nov 2026 17:55:39 -05 ===============
+[RUN] rootcvt image_cv rep0 fold0 seed=1234 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.708 auc=0.701 best_ep=35 val=0.800 t=217.7s
+[RUN] rootcvt image_cv rep0 fold1 seed=1235 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.542 auc=0.535 best_ep=102 val=0.800 t=173.1s
+[RUN] rootcvt image_cv rep0 fold2 seed=1236 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.696 auc=0.720 best_ep=117 val=0.760 t=180.7s
+[RUN] rootcvt image_cv rep0 fold3 seed=1237 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.696 auc=0.705 best_ep=37 val=0.800 t=183.3s
+[RUN] rootcvt image_cv rep0 fold4 seed=1238 train=92 val=25 test=23
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7444885851c0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.652 auc=0.727 best_ep=14 val=0.840 t=173.1s
+[RUN] rootcvt image_cv rep0 fold5 seed=1239 train=92 val=25 test=23
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7443e8f96660> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.522 auc=0.705 best_ep=54 val=0.680 t=185.7s
+[RUN] rootcvt image_cv rep1 fold0 seed=1334 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.792 auc=0.778 best_ep=35 val=0.800 t=223.4s
+[RUN] rootcvt image_cv rep1 fold1 seed=1335 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.625 auc=0.618 best_ep=83 val=0.640 t=353.3s
+[RUN] rootcvt image_cv rep1 fold2 seed=1336 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.478 auc=0.492 best_ep=62 val=0.680 t=329.7s
+[RUN] rootcvt image_cv rep1 fold3 seed=1337 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.522 auc=0.379 best_ep=49 val=0.640 t=261.1s
+[RUN] rootcvt image_cv rep1 fold4 seed=1338 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.696 auc=0.659 best_ep=149 val=0.800 t=245.3s
+[RUN] rootcvt image_cv rep1 fold5 seed=1339 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.696 auc=0.856 best_ep=8 val=0.800 t=248.7s
+=============== rootcvt_7b / image_cv  lun 23 nov 2026 18:42:55 -05 ===============
+[SKIP] rootcvt_7b/image_cv omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/rootcvt_7b_image_cv)
+=============== mobilenetv2 / image_cv  lun 23 nov 2026 18:42:55 -05 ===============
+[SKIP] mobilenetv2/image_cv omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/mobilenetv2_image_cv)
+=============== rootcvt_p4 / plant_cv  lun 23 nov 2026 18:42:55 -05 ===============

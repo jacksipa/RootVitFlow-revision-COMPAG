@@ -22,3 +22,109 @@ Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/cs
   it 4250 loss 0.4589 val_dice 0.5669 (16.1 min)
   it 4500 loss 0.5170 val_dice 0.5734 (16.8 min)
   it 4750 loss 0.4851 val_dice 0.5731 (17.5 min)
+  it 5000 loss 0.4843 val_dice 0.5735 (18.3 min)
+  it 5250 loss 0.2666 val_dice 0.5741 (19.0 min)
+  it 5500 loss 0.4669 val_dice 0.5787 (19.8 min)
+  it 5750 loss 0.2448 val_dice 0.5761 (20.6 min)
+  it 6000 loss 0.4973 val_dice 0.5755 (21.3 min)
+  it 6250 loss 0.4551 val_dice 0.5788 (22.0 min)
+  it 6500 loss 0.5388 val_dice 0.5773 (22.7 min)
+  it 6750 loss 0.3487 val_dice 0.5801 (23.5 min)
+  it 7000 loss 0.6034 val_dice 0.5797 (24.2 min)
+  it 7250 loss 0.3072 val_dice 0.5793 (25.0 min)
+  it 7500 loss 0.2760 val_dice 0.5797 (25.8 min)
+  it 7750 loss 0.2754 val_dice 0.5789 (26.4 min)
+  it 8000 loss 0.5262 val_dice 0.5787 (27.1 min)
+/home/semilleroia/miniconda3/envs/rootseg/lib/python3.11/site-packages/monai/inferers/utils.py:226: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  win_data = torch.cat([inputs[win_slice] for win_slice in unravel_slice]).to(sw_device)
+/home/semilleroia/miniconda3/envs/rootseg/lib/python3.11/site-packages/monai/inferers/utils.py:370: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  out[idx_zm] += p
+  test rb3_16_07_25: dice=0.592 cldice=0.683 skelF1=0.539
+  test rb3_17_07_25: dice=0.731 cldice=0.856 skelF1=0.705
+  test rb3_18_07_25: dice=0.697 cldice=0.838 skelF1=0.605
+  test rb3_19_07_25: dice=0.715 cldice=0.837 skelF1=0.630
+  test rb3_20_07_25: dice=0.703 cldice=0.822 skelF1=0.637
+  test rb3_21_07_25: dice=0.750 cldice=0.869 skelF1=0.683
+  test rb3_22_07_25: dice=0.712 cldice=0.842 skelF1=0.651
+  test rb3_23_07_25: dice=0.685 cldice=0.805 skelF1=0.594
+  test rb3_24_07_25: dice=0.701 cldice=0.841 skelF1=0.613
+  test rb3_25_07_25: dice=0.720 cldice=0.846 skelF1=0.649
+  test rb3_26_07_25: dice=0.732 cldice=0.866 skelF1=0.680
+  test rb3_27_07_25: dice=0.731 cldice=0.870 skelF1=0.625
+  test rb3_28_07_25: dice=0.715 cldice=0.848 skelF1=0.607
+  test rb3_29_07_25: dice=0.704 cldice=0.838 skelF1=0.612
+  test rb3_30_07_25: dice=0.722 cldice=0.874 skelF1=0.646
+  test rb8_16_07_25: dice=0.614 cldice=0.726 skelF1=0.547
+  test rb8_17_07_25: dice=0.736 cldice=0.868 skelF1=0.660
+  test rb8_18_07_25: dice=0.728 cldice=0.870 skelF1=0.630
+  test rb8_19_07_25: dice=0.723 cldice=0.862 skelF1=0.666
+  test rb8_20_07_25: dice=0.714 cldice=0.857 skelF1=0.628
+  test rb8_21_07_25: dice=0.737 cldice=0.898 skelF1=0.651
+  test rb8_22_07_25: dice=0.740 cldice=0.872 skelF1=0.690
+  test rb8_23_07_25: dice=0.754 cldice=0.902 skelF1=0.670
+  test rb8_24_07_25: dice=0.742 cldice=0.882 skelF1=0.656
+  test rb8_25_07_25: dice=0.727 cldice=0.866 skelF1=0.640
+  test rb8_26_07_25: dice=0.729 cldice=0.846 skelF1=0.664
+  test rb8_27_07_25: dice=0.713 cldice=0.845 skelF1=0.663
+  test rb8_28_07_25: dice=0.730 cldice=0.868 skelF1=0.703
+  test rb8_29_07_25: dice=0.650 cldice=0.773 skelF1=0.558
+  test rb8_30_07_25: dice=0.698 cldice=0.837 skelF1=0.614
+  test sb13_16_07_25: dice=0.666 cldice=0.788 skelF1=0.564
+  test sb13_17_07_25: dice=0.731 cldice=0.845 skelF1=0.672
+  test sb13_18_07_25: dice=0.653 cldice=0.760 skelF1=0.547
+  test sb13_19_07_25: dice=0.670 cldice=0.772 skelF1=0.588
+  test sb13_20_07_25: dice=0.636 cldice=0.748 skelF1=0.466
+  test sb13_21_07_25: dice=0.673 cldice=0.784 skelF1=0.604
+  test sb13_22_07_25: dice=0.709 cldice=0.843 skelF1=0.578
+  test sb13_23_07_25: dice=0.673 cldice=0.780 skelF1=0.574
+  test sb13_24_07_25: dice=0.727 cldice=0.856 skelF1=0.694
+  test sb13_25_07_25: dice=0.687 cldice=0.809 skelF1=0.603
+  test sb13_26_07_25: dice=0.729 cldice=0.857 skelF1=0.691
+  test sb13_27_07_25: dice=0.652 cldice=0.769 skelF1=0.548
+  test sb13_28_07_25: dice=0.673 cldice=0.792 skelF1=0.578
+  test sb13_29_07_25: dice=0.635 cldice=0.738 skelF1=0.510
+  test sb13_30_07_35: dice=0.649 cldice=0.760 skelF1=0.562
+  test sb15_16_07_25: dice=0.582 cldice=0.681 skelF1=0.414
+  test sb15_17_07_25: dice=0.554 cldice=0.645 skelF1=0.468
+  test sb15_18_07_25: dice=0.706 cldice=0.827 skelF1=0.666
+  test sb15_19_07_95: dice=0.642 cldice=0.748 skelF1=0.541
+  test sb15_20_07_25: dice=0.683 cldice=0.798 skelF1=0.602
+  test sb15_21_07_25: dice=0.662 cldice=0.782 skelF1=0.566
+  test sb15_22_07_25: dice=0.711 cldice=0.831 skelF1=0.679
+  test sb15_23_07_25: dice=0.687 cldice=0.823 skelF1=0.575
+  test sb15_24_07_25: dice=0.697 cldice=0.841 skelF1=0.621
+  test sb15_25_07_25: dice=0.700 cldice=0.830 skelF1=0.616
+  test sb15_26_07_25: dice=0.660 cldice=0.798 skelF1=0.518
+  test sb15_27_07_25: dice=0.651 cldice=0.768 skelF1=0.554
+  test sb15_28_07_25: dice=0.669 cldice=0.805 skelF1=0.545
+  test sb15_29_07_25: dice=0.669 cldice=0.795 skelF1=0.581
+  test sb15_30_07_25: dice=0.637 cldice=0.758 skelF1=0.479
+{
+  "model": "swinunetr",
+  "best_iter": 6750,
+  "best_val_dice_patches": 0.5800901461981667,
+  "train_minutes": 27.1,
+  "iters_done": 8000,
+  "patch": 512,
+  "batch": 4,
+  "lr": 0.0001,
+  "n_params_trainable": 25139324,
+  "dice_mean": 0.6902919459926319,
+  "iou_mean": 0.5286310226126446,
+  "precision_mean": 0.6478211019417778,
+  "recall_mean": 0.7450709911392104,
+  "cldice_mean": 0.8155645294459856,
+  "skel_precision_mean": 0.5764915993388973,
+  "skel_recall_mean": 0.6408393185819995,
+  "skel_f1_mean": 0.6053551066469083,
+  "empty_pred_mean": 0.0,
+  "dice_sd": 0.04298894549367637,
+  "iou_sd": 0.04878249146539056,
+  "precision_sd": 0.06806234931712461,
+  "recall_sd": 0.04754711697282299,
+  "cldice_sd": 0.054455780355909776,
+  "skel_precision_sd": 0.07638381194333893,
+  "skel_recall_sd": 0.060273543205772266,
+  "skel_f1_sd": 0.06436489596147049,
+  "empty_pred_sd": 0.0
+}

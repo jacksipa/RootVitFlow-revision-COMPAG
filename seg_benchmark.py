@@ -226,10 +226,11 @@ def main():
             net.eval()
             ds = []
             with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
-                for i in range(0, len(Xv), 8):
-                    xv = torch.from_numpy(Xv[i:i + 8]).permute(0, 3, 1, 2).to(device)
+                vb = min(8, hp["bs"])  # lote de validación acotado por memoria (SAM: parches de 1024)
+                for i in range(0, len(Xv), vb):
+                    xv = torch.from_numpy(Xv[i:i + vb]).permute(0, 3, 1, 2).to(device)
                     pv = (forward(args.model, net, xv).float() > 0).cpu().numpy()[:, 0]
-                    for a, b in zip(pv, Yv[i:i + 8]):
+                    for a, b in zip(pv, Yv[i:i + vb]):
                         tp = (a & (b > 0)).sum()
                         ds.append(2 * tp / max(a.sum() + b.sum(), 1))
             vd = float(np.mean(ds))

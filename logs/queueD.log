@@ -1,1 +1,40 @@
 =============== rootcvt_noaug / image_cv  lun 23 nov 2026 17:55:56 -05 ===============
+[RUN] rootcvt_noaug image_cv rep0 fold0 seed=1234 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.833 auc=0.972 best_ep=3 val=0.920 t=176.0s
+[RUN] rootcvt_noaug image_cv rep0 fold1 seed=1235 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=1.000 auc=1.000 best_ep=124 val=1.000 t=169.7s
+[RUN] rootcvt_noaug image_cv rep0 fold2 seed=1236 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=1.000 auc=1.000 best_ep=48 val=1.000 t=176.8s
+[RUN] rootcvt_noaug image_cv rep0 fold3 seed=1237 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.913 auc=0.932 best_ep=78 val=0.960 t=178.5s
+[RUN] rootcvt_noaug image_cv rep0 fold4 seed=1238 train=92 val=25 test=23
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x729db4781b20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.957 auc=1.000 best_ep=3 val=1.000 t=217.6s
+[RUN] rootcvt_noaug image_cv rep0 fold5 seed=1239 train=92 val=25 test=23
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x729ce411fba0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=1.000 auc=1.000 best_ep=11 val=1.000 t=177.6s
+[RUN] rootcvt_noaug image_cv rep1 fold0 seed=1334 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.875 auc=0.924 best_ep=18 val=1.000 t=208.0s
+[RUN] rootcvt_noaug image_cv rep1 fold1 seed=1335 train=91 val=25 test=24
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.958 auc=0.993 best_ep=17 val=1.000 t=327.9s
+[RUN] rootcvt_noaug image_cv rep1 fold2 seed=1336 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.913 auc=1.000 best_ep=16 val=1.000 t=305.4s
+[RUN] rootcvt_noaug image_cv rep1 fold3 seed=1337 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.913 auc=0.985 best_ep=45 val=0.960 t=250.4s
+[RUN] rootcvt_noaug image_cv rep1 fold4 seed=1338 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.913 auc=0.992 best_ep=74 val=1.000 t=238.0s
+[RUN] rootcvt_noaug image_cv rep1 fold5 seed=1339 train=92 val=25 test=23
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.870 auc=0.977 best_ep=6 val=1.000 t=219.0s
+=============== rootcvt_noaug / plant_cv  lun 23 nov 2026 18:41:04 -05 ===============

@@ -11,3 +11,6 @@
 [2026-11-23 18:32:20] bloqueo huérfano eliminado: results/holdout/rootcvt/rep0_fold0
 [2026-11-23 18:32:20] bloqueo huérfano eliminado: results/plant_cv/rootcvt_7b/rep0_fold0
 [2026-11-23 18:32:20] bloqueo huérfano eliminado: results/plant_cv/rootcvt_notransf/rep0_fold0
+[2026-11-23 18:37:28] run_all.sh iniciado (PID 781227)
+[2026-11-23 18:47:30] lanzando segmentación sam (intento 1)
+[2026-11-23 18:49:30] lanzando segmentación sam (intento 2)

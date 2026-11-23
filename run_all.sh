@@ -43,6 +43,8 @@ clean_stale_locks() {   # bloqueos sin proceso vivo para ese modelo/esquema
   for lk in results/*/*/*/running.lock; do
     [ -f "$lk" ] || continue
     d=$(dirname "$lk"); s=$(echo "$d" | cut -d/ -f2); m=$(echo "$d" | cut -d/ -f3)
+    case "$s" in plant_cv|image_cv|holdout) ;; *) continue ;; esac   # sólo corridas de run_exp.py
+    if [ -f "$d/info.json" ]; then rm -f "$lk"; continue; fi          # corrida terminada: conservar pesos
     if ! pgrep -f "run_exp.py --model $m --scheme $s" > /dev/null; then
       log "bloqueo huérfano eliminado: $d"; rm -f "$lk" "$d/best.weights.h5" "$d/history.csv"
     fi

@@ -1,0 +1,42 @@
+{
+  "model": "rootcvt_p4",
+  "seed": 1234,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 21,
+  "best_val_acc": 0.8666666746139526,
+  "final_train_acc": 0.8666666746139526,
+  "train_time_s": 190.0,
+  "n_params": 3842125,
+  "n_train": 90,
+  "n_val": 30,
+  "n_test": 20,
+  "scheme": "plant_cv",
+  "rep": 0,
+  "fold": 0,
+  "test_plants": [
+    "rb6",
+    "sb16"
+  ],
+  "val_plants": [
+    "rb4",
+    "sb19"
+  ],
+  "val_acc_best_ckpt": 0.8666666666666667,
+  "test_metrics": {
+    "accuracy": 0.3,
+    "balanced_accuracy": 0.30000000000000004,
+    "precision_macro": 0.29166666666666663,
+    "recall_macro": 0.30000000000000004,
+    "f1_macro": 0.29292929292929293,
+    "recall_riego": 0.4,
+    "recall_sequia": 0.2,
+    "auc": 0.36,
+    "tn": 4,
+    "fp": 6,
+    "fn": 8,
+    "tp": 2,
+    "plant_accuracy": 0.0,
+    "n_plants": 2
+  }
+}
