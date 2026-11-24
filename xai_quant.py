@@ -183,7 +183,14 @@ def main():
         P = pd.read_csv(os.path.join(run, "preds.csv")).head(args.max_per_fold)
         tf.keras.utils.set_random_seed(0)
         model = C.build_model(args.arch or args.model)
-        model.load_weights(os.path.join(run, "best.weights.h5"))
+        wpath = os.path.join(run, "best.weights.h5")
+        try:
+            model.load_weights(wpath)
+        except Exception:  # pesos guardados por TF 2.11 (H5 clásico con extensión .weights.h5)
+            import shutil, tempfile
+            tmp = os.path.join(tempfile.gettempdir(), f"legacy_{args.model}_{fd}.h5")
+            shutil.copy(wpath, tmp)
+            model.load_weights(tmp)
         gc_fn, gc_layer = make_gradcam_fn(model)
         ig_fn = make_ig_fn(model)
         for _, r in P.iterrows():

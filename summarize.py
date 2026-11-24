@@ -90,7 +90,7 @@ def summary_table(runs, preds, models, scheme):
             "F1 macro": fmt(r.f1_macro.mean(), r.f1_macro.std()),
             "AUC": fmt(r.auc.mean(), r.auc.std()) if r.auc.notna().any() else "—",
             "Accuracy agrupada": f"{100*pooled_acc:.1f}",
-            "IC95% (bootstrap por planta)": f"[{100*lo:.1f}, {100*hi:.1f}]",
+            "IC95% rep 0 (bootstrap por planta)": f"[{100*lo:.1f}, {100*hi:.1f}]",
             "AUC agrupada": f"{100*pooled_auc:.1f}",
             "Accuracy por planta (voto)": f"{100*plant_acc:.1f}",
             "Val acc (selección)": f"{100*r.best_val_acc.mean():.1f}",

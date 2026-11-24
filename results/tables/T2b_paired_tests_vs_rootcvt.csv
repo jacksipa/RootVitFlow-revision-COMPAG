@@ -1,2 +1,10 @@
 modelo,diff_acc_vs_rootcvt_pp,wilcoxon_p,n_pares
-MobileNetV2 (ImageNet),-22.777777777777775,,3
+RootCVT (model97) entrenado en TF 2.11 (versión original),-7.499999999999996,,2
+"RootCVT checkpoint-100% (7 bloques, 4 tokens)",-6.8888888888888875,0.2783203125,12
+Sensibilidad: RootCVT sin data augmentation,11.611111111111112,0.3095703125,12
+Ablación: backbone CNN+SE sin Transformer,10.25,0.2138671875,12
+Ablación: RootCVT patch 4 (49 tokens),4.055555555555557,0.662109375,12
+MobileNetV2 (ImageNet),-1.1944444444444433,0.9541015625,12
+InceptionV3 (ImageNet),3.083333333333334,0.8310546875,12
+ResNet50 (ImageNet),-1.0,0.9697265625,12
+DenseNet201 (ImageNet),-4.36111111111111,0.423828125,12

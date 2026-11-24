@@ -1,0 +1,6 @@
+{
+  "deletion_gradcam_vs_random": 0.0020089187408138015,
+  "insertion_gradcam_vs_random": 0.024145838734881304,
+  "deletion_ig_gray_vs_random": 1.1264710247446793e-24,
+  "insertion_ig_gray_vs_random": 1.2277396430138163e-24
+}

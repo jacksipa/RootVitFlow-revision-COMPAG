@@ -6,3 +6,51 @@ WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 va
 [INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
 [XAI] rep0_fold0: 20 imgs (Grad-CAM layer conv2d_18)
 WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold1: 30 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold2: 20 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold3: 20 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold4: 25 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold5: 25 imgs (Grad-CAM layer conv2d_18)
+correct                                 0        1  all_mean
+conc_gradcam                mean    3.386    2.796       NaN
+                            std     2.527    2.236       NaN
+conc_ig_black               mean  207.233  206.902       NaN
+                            std    84.649  118.385       NaN
+conc_ig_gray                mean    2.496    2.461       NaN
+                            std     1.723    2.131       NaN
+conc_ig_blur                mean  146.602  143.491       NaN
+                            std    72.274   81.972       NaN
+conc_ig_noise               mean    2.265    2.335       NaN
+                            std     1.471    1.808       NaN
+outside_tokens_frac_gradcam mean    0.254    0.216       NaN
+                            std     0.173    0.202       NaN
+outside_tokens_frac_ig_gray mean    0.082    0.088       NaN
+                            std     0.018    0.021       NaN
+outside_tokens_root_frac    mean    0.126    0.121       NaN
+                            std     0.102    0.119       NaN
+del_auc_gradcam             mean    0.627    0.646       NaN
+                            std     0.246    0.174       NaN
+ins_auc_gradcam             mean    0.637    0.650       NaN
+                            std     0.244    0.197       NaN
+del_auc_random_gradcam      mean    0.656    0.679       NaN
+                            std     0.251    0.166       NaN
+ins_auc_random_gradcam      mean    0.649    0.685       NaN
+                            std     0.251    0.164       NaN
+del_auc_ig_gray             mean    0.400    0.389       NaN
+                            std     0.283    0.251       NaN
+ins_auc_ig_gray             mean    0.825    0.868       NaN
+                            std     0.190    0.117       NaN
+del_auc_random_ig_gray      mean    0.653    0.686       NaN
+                            std     0.254    0.163       NaN
+ins_auc_random_ig_gray      mean    0.654    0.681       NaN
+                            std     0.246    0.168       NaN
+{'deletion_gradcam_vs_random': 0.00020319322408507962, 'insertion_gradcam_vs_random': 0.020043996905557776, 'deletion_ig_gray_vs_random': 1.5407113797232015e-23, 'insertion_ig_gray_vs_random': 2.279103671755761e-22}

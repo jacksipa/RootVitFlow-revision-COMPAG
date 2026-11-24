@@ -12,7 +12,7 @@ python xai_quant.py --model rootcvt_tf211 --arch rootcvt > logs/xai_tf211.log 2>
 echo "[$(date '+%T')] tablas"
 python summarize.py > logs/summarize.log 2>&1 || echo "ERROR summarize"
 python organize_deliverables.py > logs/organize.log 2>&1 || echo "ERROR organize"
-rm -rf results/plant_cv/rootcvt_tf211/rep1_fold*   # carpetas reservadas (no se corrieron en TF 2.11)
+rm -rf results/plant_cv/rootcvt_tf211/rep1_fold* results/holdout/rootcvt_tf211/rep2_fold0   # carpetas reservadas (no se corrieron en TF 2.11)
 rm -rf ENTREGA_REVISORES/99_resultados_completos ENTREGA_REVISORES/98_codigo
 cp -r results ENTREGA_REVISORES/99_resultados_completos
 find ENTREGA_REVISORES/99_resultados_completos \( -name "*.h5" -o -name "*.pt" -o -name "running.lock" \) -delete

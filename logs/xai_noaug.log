@@ -3,3 +3,56 @@ I0000 00:00:1795484067.624490 1913408 port.cc:153] oneDNN custom operations are 
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
 I0000 00:00:1795484069.267490 1913408 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/xai_quant.py:156: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "gradcam_spearman": spearmanr(ref_gc[i].ravel(), g.ravel())[0],
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold0: 20 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold1: 30 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold2: 20 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold3: 20 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold4: 25 imgs (Grad-CAM layer conv2d_18)
+WARNING:absl:Skipping variable loading for optimizer 'Adam', because it has 1 variables whereas the saved optimizer has 367 variables. 
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold5: 25 imgs (Grad-CAM layer conv2d_18)
+correct                                 0        1  all_mean
+conc_gradcam                mean    2.249    1.453       NaN
+                            std     2.583    1.582       NaN
+conc_ig_black               mean  223.878  194.058       NaN
+                            std    97.113  108.186       NaN
+conc_ig_gray                mean    5.956    3.011       NaN
+                            std     5.977    2.558       NaN
+conc_ig_blur                mean  173.780  138.719       NaN
+                            std    90.514   80.986       NaN
+conc_ig_noise               mean    5.057    2.834       NaN
+                            std     5.048    2.308       NaN
+outside_tokens_frac_gradcam mean    0.176    0.272       NaN
+                            std     0.178    0.211       NaN
+outside_tokens_frac_ig_gray mean    0.071    0.071       NaN
+                            std     0.020    0.018       NaN
+outside_tokens_root_frac    mean    0.066    0.167       NaN
+                            std     0.073    0.116       NaN
+del_auc_gradcam             mean    0.750    0.788       NaN
+                            std     0.308    0.292       NaN
+ins_auc_gradcam             mean    0.745    0.839       NaN
+                            std     0.288    0.215       NaN
+del_auc_random_gradcam      mean    0.758    0.805       NaN
+                            std     0.303    0.261       NaN
+ins_auc_random_gradcam      mean    0.756    0.804       NaN
+                            std     0.305    0.260       NaN
+del_auc_ig_gray             mean    0.415    0.529       NaN
+                            std     0.379    0.397       NaN
+ins_auc_ig_gray             mean    0.933    0.959       NaN
+                            std     0.120    0.089       NaN
+del_auc_random_ig_gray      mean    0.759    0.809       NaN
+                            std     0.299    0.253       NaN
+ins_auc_random_ig_gray      mean    0.761    0.803       NaN
+                            std     0.298    0.258       NaN
+{'deletion_gradcam_vs_random': 0.0020089187408138015, 'insertion_gradcam_vs_random': 0.024145838734881304, 'deletion_ig_gray_vs_random': 1.1264710247446793e-24, 'insertion_ig_gray_vs_random': 1.2277396430138163e-24}
