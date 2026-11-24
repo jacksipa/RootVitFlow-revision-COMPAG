@@ -1,2 +1,18 @@
 <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
 [sam] train=115 val=25 test=60 patch=1024 bs=2 lr=0.0001
+/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/seg_benchmark.py:237: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  log.append({"iter": it, "loss": float(loss), "val_dice_patches": vd, "minutes": (time.time() - t0) / 60})
+  it 250 loss 0.3760 val_dice 0.5408 (1.1 min)
+  it 500 loss 0.7312 val_dice 0.5580 (2.1 min)
+  it 750 loss 0.3041 val_dice 0.5728 (3.2 min)
+  it 1000 loss 0.4173 val_dice 0.5521 (4.4 min)
+  it 1250 loss 0.3943 val_dice 0.5795 (5.4 min)
+  it 1500 loss 0.3588 val_dice 0.5512 (6.5 min)
+  it 1750 loss 0.6906 val_dice 0.5587 (7.5 min)
+  it 2000 loss 0.4602 val_dice 0.5729 (8.6 min)
+  it 2250 loss 0.3754 val_dice 0.5835 (9.6 min)
+  it 2500 loss 0.3566 val_dice 0.5877 (10.7 min)
+  it 2750 loss 0.4697 val_dice 0.5718 (11.7 min)
+  it 3000 loss 0.4003 val_dice 0.5921 (12.8 min)
+  it 3250 loss 0.6887 val_dice 0.5945 (13.9 min)

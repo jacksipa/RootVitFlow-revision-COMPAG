@@ -27,6 +27,7 @@ def main():
     ap.add_argument("--scheme", required=True, choices=["plant_cv", "image_cv", "holdout"])
     ap.add_argument("--epochs", type=int, default=cfg.EPOCHS)
     ap.add_argument("--reps", type=int, nargs="*", default=None)
+    ap.add_argument("--tag", default="", help="sufijo de la carpeta de resultados (p.ej. _tf211)")
     args = ap.parse_args()
 
     skip = os.path.join(cfg.PROJECT_ROOT, "skip", f"{args.model}_{args.scheme}")
@@ -43,7 +44,7 @@ def main():
 
     keep_w = args.model.startswith("rootcvt")  # pesos sólo para RootCVT (XAI)
     for (rep, fold), g in A.groupby(["rep", "fold"]):
-        out = os.path.join(cfg.RESULTS_DIR, args.scheme, args.model, f"rep{rep}_fold{fold}")
+        out = os.path.join(cfg.RESULTS_DIR, args.scheme, args.model + args.tag, f"rep{rep}_fold{fold}")
         if os.path.exists(os.path.join(out, "info.json")):
             print(f"[SKIP] {out}")
             continue
@@ -65,7 +66,8 @@ def main():
                       "day_index": te.day_index.values, "y_true": te.label.values,
                       "p_sequia": p_te}).to_csv(os.path.join(out, "preds.csv"), index=False)
         m = C.compute_metrics(te.label.values, p_te, te.plant.values)
-        info.update({"scheme": args.scheme, "rep": int(rep), "fold": int(fold),
+        import tensorflow as _tf
+        info.update({"tf_version": _tf.__version__, "model": args.model + args.tag, "scheme": args.scheme, "rep": int(rep), "fold": int(fold),
                      "test_plants": sorted(te.plant.unique().tolist()),
                      "val_plants": sorted(meta.iloc[idx["val"]].plant.unique().tolist())
                      if args.scheme != "image_cv" else None,

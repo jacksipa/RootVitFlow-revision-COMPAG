@@ -26,6 +26,7 @@ os.makedirs(OUT, exist_ok=True)
 os.makedirs(FIG, exist_ok=True)
 
 NICE = {"rootcvt": "RootCVT (model97, 9 bloques, 4 tokens)",
+        "rootcvt_tf211": "RootCVT (model97) entrenado en TF 2.11 (versión original)",
         "rootcvt_7b": "RootCVT checkpoint-100% (7 bloques, 4 tokens)",
         "rootcvt_noaug": "Sensibilidad: RootCVT sin data augmentation",
         "rootcvt_notransf": "Ablación: backbone CNN+SE sin Transformer",

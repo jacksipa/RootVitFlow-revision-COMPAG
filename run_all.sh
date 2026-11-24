@@ -44,6 +44,7 @@ clean_stale_locks() {   # bloqueos sin proceso vivo para ese modelo/esquema
     [ -f "$lk" ] || continue
     d=$(dirname "$lk"); s=$(echo "$d" | cut -d/ -f2); m=$(echo "$d" | cut -d/ -f3)
     case "$s" in plant_cv|image_cv|holdout) ;; *) continue ;; esac   # sólo corridas de run_exp.py
+    case "$m" in *_tf211) continue ;; esac                           # corridas TF 2.11 (run_tf211.sh) se gestionan aparte
     if [ -f "$d/info.json" ]; then rm -f "$lk"; continue; fi          # corrida terminada: conservar pesos
     if ! pgrep -f "run_exp.py --model $m --scheme $s" > /dev/null; then
       log "bloqueo huérfano eliminado: $d"; rm -f "$lk" "$d/best.weights.h5" "$d/history.csv"

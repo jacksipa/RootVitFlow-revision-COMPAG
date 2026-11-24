@@ -1,4 +1,4 @@
-Actualizado: lun 23 nov 2026 18:49:30 -05
-Clasificación: faltan 90 corridas | colas vivas: 4 | procesos: 4
+Actualizado: lun 23 nov 2026 19:04:20 -05
+Clasificación: faltan 71 corridas | colas vivas: 4 | procesos: 7
 Segmentación: terminados 2/3 | corriendo 1
-96 %, 16234 MiB
+94 %, 22321 MiB

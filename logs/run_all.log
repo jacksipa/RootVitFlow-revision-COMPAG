@@ -14,3 +14,5 @@
 [2026-11-23 18:37:28] run_all.sh iniciado (PID 781227)
 [2026-11-23 18:47:30] lanzando segmentación sam (intento 1)
 [2026-11-23 18:49:30] lanzando segmentación sam (intento 2)
+[2026-11-23 19:03:34] bloqueo huérfano eliminado: results/plant_cv/rootcvt_tf211/rep0_fold0
+[2026-11-23 19:04:19] run_all.sh iniciado (PID 1112447)

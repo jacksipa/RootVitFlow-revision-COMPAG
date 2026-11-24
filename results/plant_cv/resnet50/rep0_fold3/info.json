@@ -1,0 +1,42 @@
+{
+  "model": "resnet50",
+  "seed": 1237,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 9,
+  "best_val_acc": 0.800000011920929,
+  "final_train_acc": 0.9684210419654846,
+  "train_time_s": 126.2,
+  "n_params": 23850754,
+  "n_train": 95,
+  "n_val": 25,
+  "n_test": 20,
+  "scheme": "plant_cv",
+  "rep": 0,
+  "fold": 3,
+  "test_plants": [
+    "rb10",
+    "sb20"
+  ],
+  "val_plants": [
+    "rb7",
+    "sb12"
+  ],
+  "val_acc_best_ckpt": 0.8,
+  "test_metrics": {
+    "accuracy": 0.2,
+    "balanced_accuracy": 0.2,
+    "precision_macro": 0.1875,
+    "recall_macro": 0.2,
+    "f1_macro": 0.1919191919191919,
+    "recall_riego": 0.1,
+    "recall_sequia": 0.3,
+    "auc": 0.07,
+    "tn": 1,
+    "fp": 9,
+    "fn": 7,
+    "tp": 3,
+    "plant_accuracy": 0.0,
+    "n_plants": 2
+  }
+}

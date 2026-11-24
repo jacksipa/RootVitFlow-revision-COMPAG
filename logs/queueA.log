@@ -38,3 +38,13 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 [INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
    -> test acc=0.640 auc=0.293 best_ep=91 val=0.833 t=240.0s
 =============== rootcvt / holdout  lun 23 nov 2026 18:43:23 -05 ===============
+[RUN] rootcvt holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.350 auc=0.298 best_ep=2 val=0.600 t=218.7s
+[RUN] rootcvt holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.350 auc=0.311 best_ep=89 val=0.960 t=200.1s
+[RUN] rootcvt holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.533 auc=0.614 best_ep=111 val=0.560 t=237.7s
+=============== rootcvt_7b / plant_cv  lun 23 nov 2026 18:54:38 -05 ===============

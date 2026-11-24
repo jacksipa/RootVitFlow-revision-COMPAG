@@ -26,3 +26,30 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 [RUN] mobilenetv2 plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
    -> test acc=0.560 auc=0.600 best_ep=26 val=1.000 t=123.8s
 =============== inceptionv3 / plant_cv  lun 23 nov 2026 18:19:20 -05 ===============
+[RUN] inceptionv3 plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+   -> test acc=0.550 auc=0.580 best_ep=19 val=0.967 t=255.5s
+[RUN] inceptionv3 plant_cv rep0 fold1 seed=1235 train=90 val=20 test=30
+   -> test acc=0.233 auc=0.000 best_ep=6 val=0.800 t=178.8s
+[RUN] inceptionv3 plant_cv rep0 fold2 seed=1236 train=100 val=20 test=20
+   -> test acc=0.500 auc=0.920 best_ep=49 val=0.900 t=191.4s
+[RUN] inceptionv3 plant_cv rep0 fold3 seed=1237 train=95 val=25 test=20
+   -> test acc=0.700 auc=0.560 best_ep=29 val=0.840 t=164.7s
+[RUN] inceptionv3 plant_cv rep0 fold4 seed=1238 train=90 val=25 test=25
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x70adb6580540> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+   -> test acc=0.160 auc=0.093 best_ep=40 val=0.920 t=135.8s
+[RUN] inceptionv3 plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x70abc7e7cae0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+   -> test acc=0.480 auc=0.847 best_ep=11 val=0.850 t=127.6s
+[RUN] inceptionv3 plant_cv rep1 fold0 seed=1334 train=85 val=25 test=30
+   -> test acc=0.500 auc=0.484 best_ep=129 val=0.720 t=146.7s
+[RUN] inceptionv3 plant_cv rep1 fold1 seed=1335 train=95 val=20 test=25
+   -> test acc=0.360 auc=0.247 best_ep=61 val=1.000 t=139.7s
+[RUN] inceptionv3 plant_cv rep1 fold2 seed=1336 train=100 val=20 test=20
+   -> test acc=1.000 auc=1.000 best_ep=96 val=0.950 t=129.8s
+[RUN] inceptionv3 plant_cv rep1 fold3 seed=1337 train=100 val=20 test=20
+   -> test acc=0.600 auc=0.610 best_ep=7 val=0.650 t=122.4s
+[RUN] inceptionv3 plant_cv rep1 fold4 seed=1338 train=95 val=25 test=20
+   -> test acc=0.350 auc=0.120 best_ep=124 val=0.640 t=114.3s
+[RUN] inceptionv3 plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
+   -> test acc=0.560 auc=0.840 best_ep=65 val=1.000 t=123.3s
+=============== resnet50 / plant_cv  lun 23 nov 2026 18:51:49 -05 ===============
