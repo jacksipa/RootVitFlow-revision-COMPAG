@@ -1,0 +1,157 @@
+Tablas en /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/tables
+
+#### T1_leakage.md
+| Modelo                                      | Esquema                  |   n_runs | Accuracy (media ± DE por fold)   | Bal. accuracy   | F1 macro    | AUC         |   Accuracy agrupada | IC95% rep 0 (bootstrap por planta)   |   AUC agrupada |   Accuracy por planta (voto) |   Val acc (selección) |   Train acc final |   Mejor época (media) |   Parámetros |
+|:--------------------------------------------|:-------------------------|---------:|:---------------------------------|:----------------|:------------|:------------|--------------------:|:-------------------------------------|---------------:|-----------------------------:|----------------------:|------------------:|----------------------:|-------------:|
+| RootCVT (model97, 9 bloques, 4 tokens)      | CV por imagen (con fuga) |       12 | 63.5 ± 9.7                       | 63.5 ± 9.9      | 62.3 ± 10.8 | 65.6 ± 13.2 |                63.6 | [51.1, 75.6]                         |           66.9 |                         75   |                  75.3 |              65.6 |                    62 |    5,562,445 |
+| Sensibilidad: RootCVT sin data augmentation | CV por imagen (con fuga) |       12 | 92.9 ± 5.5                       | 92.8 ± 5.6      | 92.8 ± 5.6  | 98.1 ± 2.7  |                92.9 | [93.8, 96.0]                         |           98.3 |                        100   |                  98.7 |             100   |                    37 |    5,562,445 |
+| RootCVT (model97, 9 bloques, 4 tokens)      | CV agrupada por planta   |       12 | 46.9 ± 19.4                      | 48.1 ± 18.9     | 42.6 ± 19.7 | 43.5 ± 31.4 |                46.4 | [41.3, 68.9]                         |           42.2 |                         37.5 |                  81.5 |              75.4 |                    33 |    5,562,445 |
+| Sensibilidad: RootCVT sin data augmentation | CV agrupada por planta   |       12 | 58.5 ± 27.2                      | 57.6 ± 26.6     | 52.6 ± 28.7 | 65.2 ± 38.8 |                55.7 | [35.2, 76.8]                         |           61.7 |                         58.3 |                  76.4 |             100   |                    42 |    5,562,445 |
+
+#### T2_models_plant_cv.md
+| Modelo                                                    | Esquema                |   n_runs | Accuracy (media ± DE por fold)   | Bal. accuracy   | F1 macro    | AUC         |   Accuracy agrupada | IC95% rep 0 (bootstrap por planta)   |   AUC agrupada |   Accuracy por planta (voto) |   Val acc (selección) |   Train acc final |   Mejor época (media) |   Parámetros |
+|:----------------------------------------------------------|:-----------------------|---------:|:---------------------------------|:----------------|:------------|:------------|--------------------:|:-------------------------------------|---------------:|-----------------------------:|----------------------:|------------------:|----------------------:|-------------:|
+| RootCVT (model97, 9 bloques, 4 tokens)                    | CV agrupada por planta |       12 | 46.9 ± 19.4                      | 48.1 ± 18.9     | 42.6 ± 19.7 | 43.5 ± 31.4 |                46.4 | [41.3, 68.9]                         |           42.2 |                         37.5 |                  81.5 |              75.4 |                    33 |    5,562,445 |
+| RootCVT (model97) entrenado en TF 2.11 (versión original) | CV agrupada por planta |        6 | 45.1 ± 25.5                      | 46.9 ± 25.5     | 43.4 ± 25.0 | 46.5 ± 29.8 |                47.1 | [28.1, 66.7]                         |           41.6 |                         50   |                  76.8 |              96.1 |                    52 |    5,562,445 |
+| RootCVT checkpoint-100% (7 bloques, 4 tokens)             | CV agrupada por planta |       12 | 40.0 ± 17.9                      | 41.5 ± 17.7     | 35.0 ± 17.1 | 34.9 ± 21.9 |                39.3 | [18.4, 58.5]                         |           33.9 |                         37.5 |                  77.5 |              76.4 |                    45 |    5,450,700 |
+| Sensibilidad: RootCVT sin data augmentation               | CV agrupada por planta |       12 | 58.5 ± 27.2                      | 57.6 ± 26.6     | 52.6 ± 28.7 | 65.2 ± 38.8 |                55.7 | [35.2, 76.8]                         |           61.7 |                         58.3 |                  76.4 |             100   |                    42 |    5,562,445 |
+| Ablación: backbone CNN+SE sin Transformer                 | CV agrupada por planta |       12 | 57.1 ± 15.4                      | 58.1 ± 14.0     | 51.5 ± 17.5 | 65.1 ± 25.6 |                56.8 | [35.7, 74.8]                         |           57.5 |                         58.3 |                  71   |              73.9 |                    32 |      960,840 |
+| Ablación: RootCVT patch 4 (49 tokens)                     | CV agrupada por planta |       12 | 50.9 ± 22.5                      | 51.5 ± 21.9     | 46.9 ± 23.8 | 51.6 ± 26.7 |                50.7 | [31.6, 71.1]                         |           51.4 |                         54.2 |                  76.3 |              77.3 |                    54 |    3,842,125 |
+| MobileNetV2 (ImageNet)                                    | CV agrupada por planta |       12 | 45.7 ± 25.1                      | 45.0 ± 24.4     | 40.2 ± 24.9 | 49.2 ± 35.1 |                46.8 | [18.5, 60.8]                         |           49.2 |                         50   |                  77.8 |              98.9 |                    34 |    2,422,722 |
+| InceptionV3 (ImageNet)                                    | CV agrupada por planta |       12 | 49.9 ± 22.1                      | 50.6 ± 21.9     | 42.2 ± 23.9 | 52.5 ± 34.4 |                48.2 | [22.1, 63.8]                         |           47.1 |                         45.8 |                  85.3 |              97.9 |                    53 |   22,065,826 |
+| ResNet50 (ImageNet)                                       | CV agrupada por planta |       12 | 45.9 ± 25.9                      | 45.8 ± 25.6     | 42.4 ± 26.2 | 43.6 ± 34.7 |                45.7 | [21.3, 60.7]                         |           40.4 |                         37.5 |                  83.9 |              95.2 |                    59 |   23,850,754 |
+| DenseNet201 (ImageNet)                                    | CV agrupada por planta |       12 | 42.5 ± 19.9                      | 40.6 ± 19.8     | 35.8 ± 18.7 | 48.1 ± 29.9 |                43.6 | [20.8, 62.7]                         |           46.3 |                         37.5 |                  79.1 |              98.1 |                    33 |   18,568,642 |
+
+#### T3_holdout.md
+| Modelo                                                    |   n_reps | Accuracy (media ± DE reps)   | AUC (media ± DE)   | F1 macro (media ± DE)   |   Accuracy ensemble | IC95% planta   |   AUC ensemble | Acc. por planta (ensemble)                            |
+|:----------------------------------------------------------|---------:|:-----------------------------|:-------------------|:------------------------|--------------------:|:---------------|---------------:|:------------------------------------------------------|
+| RootCVT (model97, 9 bloques, 4 tokens)                    |        3 | 41.1 ± 10.6                  | 40.8 ± 17.9        | 38.4 ± 8.0              |                30   | [10.0, 50.0]   |           31.3 | {"rb3": 0.8, "rb8": 0.07, "sb13": 0.13, "sb15": 0.2}  |
+| RootCVT (model97) entrenado en TF 2.11 (versión original) |        2 | 50.0 ± 0.0                   | 48.1 ± 11.1        | 39.2 ± 4.4              |                53.3 | [50.0, 56.7]   |           35.3 | {"rb3": 0.13, "rb8": 0.0, "sb13": 1.0, "sb15": 1.0}   |
+| RootCVT checkpoint-100% (7 bloques, 4 tokens)             |        3 | 44.4 ± 24.6                  | 42.2 ± 29.8        | 42.7 ± 24.8             |                26.7 | [3.3, 50.0]    |           20.6 | {"rb3": 0.47, "rb8": 0.07, "sb13": 0.53, "sb15": 0.0} |
+| Sensibilidad: RootCVT sin data augmentation               |        3 | 36.1 ± 4.2                   | 35.8 ± 10.9        | 35.0 ± 3.4              |                31.7 | [6.7, 56.7]    |           33.6 | {"rb3": 0.47, "rb8": 0.13, "sb13": 0.67, "sb15": 0.0} |
+| Ablación: backbone CNN+SE sin Transformer                 |        3 | 31.7 ± 6.0                   | 18.5 ± 0.4         | 26.5 ± 3.3              |                26.7 | [13.3, 40.0]   |           17.4 | {"rb3": 0.53, "rb8": 0.27, "sb13": 0.27, "sb15": 0.0} |
+| Ablación: RootCVT patch 4 (49 tokens)                     |        3 | 34.4 ± 10.0                  | 24.0 ± 12.9        | 33.2 ± 10.5             |                25   | [6.7, 43.3]    |           19.8 | {"rb3": 0.6, "rb8": 0.13, "sb13": 0.27, "sb15": 0.0}  |
+| MobileNetV2 (ImageNet)                                    |        3 | 42.2 ± 26.7                  | 44.4 ± 30.8        | 40.9 ± 26.9             |                30   | [20.0, 40.0]   |           29.1 | {"rb3": 0.4, "rb8": 0.6, "sb13": 0.2, "sb15": 0.0}    |
+| InceptionV3 (ImageNet)                                    |        3 | 35.0 ± 17.3                  | 28.5 ± 18.9        | 31.1 ± 18.1             |                23.3 | [20.0, 26.7]   |           13.7 | {"rb3": 0.47, "rb8": 0.4, "sb13": 0.07, "sb15": 0.0}  |
+| ResNet50 (ImageNet)                                       |        3 | 33.3 ± 12.0                  | 21.7 ± 4.6         | 27.5 ± 4.7              |                 8.3 | [6.7, 10.0]    |           10.9 | {"rb3": 0.2, "rb8": 0.13, "sb13": 0.0, "sb15": 0.0}   |
+| DenseNet201 (ImageNet)                                    |        3 | 49.4 ± 8.6                   | 49.0 ± 2.0         | 45.2 ± 7.1              |                55   | [46.7, 63.3]   |           45.4 | {"rb3": 0.2, "rb8": 0.47, "sb13": 0.73, "sb15": 0.8}  |
+
+#### T5_classical_ml.md
+| features   | scheme   | model        |   acc_mean |   acc_sd |   f1_mean |   auc_mean |
+|:-----------|:---------|:-------------|-----------:|---------:|----------:|-----------:|
+| extended   | holdout  | HistGB       |      0.55  |    0     |     0.52  |      0.408 |
+| extended   | holdout  | LogReg       |      0.617 |    0     |     0.563 |      0.557 |
+| extended   | holdout  | RandomForest |      0.317 |    0.017 |     0.31  |      0.331 |
+| extended   | holdout  | SVM-RBF      |      0.267 |    0     |     0.259 |      0.308 |
+| extended   | holdout  | kNN          |      0.417 |    0     |     0.388 |      0.355 |
+| extended   | image_cv | HistGB       |      0.747 |    0.054 |     0.744 |      0.851 |
+| extended   | image_cv | LogReg       |      0.733 |    0.078 |     0.731 |      0.818 |
+| extended   | image_cv | RandomForest |      0.786 |    0.063 |     0.784 |      0.845 |
+| extended   | image_cv | SVM-RBF      |      0.743 |    0.07  |     0.739 |      0.811 |
+| extended   | image_cv | kNN          |      0.722 |    0.069 |     0.716 |      0.783 |
+| extended   | plant_cv | HistGB       |      0.599 |    0.177 |     0.562 |      0.716 |
+| extended   | plant_cv | LogReg       |      0.631 |    0.195 |     0.603 |      0.73  |
+| extended   | plant_cv | RandomForest |      0.663 |    0.172 |     0.644 |      0.716 |
+| extended   | plant_cv | SVM-RBF      |      0.578 |    0.191 |     0.535 |      0.73  |
+| extended   | plant_cv | kNN          |      0.557 |    0.14  |     0.516 |      0.587 |
+| paper3     | holdout  | HistGB       |      0.25  |    0     |     0.24  |      0.254 |
+| paper3     | holdout  | LogReg       |      0.25  |    0     |     0.224 |      0.156 |
+| paper3     | holdout  | RandomForest |      0.333 |    0     |     0.333 |      0.311 |
+| paper3     | holdout  | SVM-RBF      |      0.256 |    0.019 |     0.254 |      0.172 |
+| paper3     | holdout  | kNN          |      0.367 |    0     |     0.367 |      0.341 |
+| paper3     | image_cv | HistGB       |      0.654 |    0.061 |     0.651 |      0.68  |
+| paper3     | image_cv | LogReg       |      0.618 |    0.107 |     0.616 |      0.667 |
+| paper3     | image_cv | RandomForest |      0.633 |    0.114 |     0.627 |      0.66  |
+| paper3     | image_cv | SVM-RBF      |      0.622 |    0.077 |     0.617 |      0.655 |
+| paper3     | image_cv | kNN          |      0.607 |    0.091 |     0.6   |      0.631 |
+| paper3     | plant_cv | HistGB       |      0.598 |    0.115 |     0.591 |      0.607 |
+| paper3     | plant_cv | LogReg       |      0.596 |    0.116 |     0.577 |      0.675 |
+| paper3     | plant_cv | RandomForest |      0.561 |    0.136 |     0.551 |      0.582 |
+| paper3     | plant_cv | SVM-RBF      |      0.597 |    0.089 |     0.579 |      0.602 |
+| paper3     | plant_cv | kNN          |      0.609 |    0.138 |     0.598 |      0.61  |
+
+#### T5b_morpho_stats.md
+| feature              |   riego_mean |   riego_sd |   sequia_mean |   sequia_sd |   hedges_g |   mwu_p |   lmm_treat_coef |   lmm_treat_p |   lmm_treat_x_day_coef |   lmm_treat_x_day_p |   mwu_p_holm |   lmm_treat_p_holm |   lmm_treat_x_day_p_holm |
+|:---------------------|-------------:|-----------:|--------------:|------------:|-----------:|--------:|-----------------:|--------------:|-----------------------:|--------------------:|-------------:|-------------------:|-------------------------:|
+| length_mm            |     475.549  |   115.359  |      499.737  |    172.191  |    -0.156  |  0.7209 |           0.2291 |        0.2373 |                -0.0299 |              0      |            1 |             1      |                   0      |
+| area_mm2             |     347.953  |    82.587  |      357.304  |    123.355  |    -0.0842 |  0.9591 |           0.1799 |        0.3556 |                -0.025  |              0.0004 |            1 |             1      |                   0.0043 |
+| mean_width_mm        |       0.7424 |     0.0719 |        0.7125 |      0.0104 |     0.5494 |  0.5054 |          -0.0479 |        0.179  |                 0.0045 |              0.3292 |            1 |             1      |                   1      |
+| n_components         |      19.6042 |     5.5377 |       25.6125 |      7.8587 |    -0.8356 |  0.1304 |           0.3127 |        0.1013 |                -0.0072 |              0.3343 |            1 |             1      |                   1      |
+| n_comp_ge1mm         |      19.5625 |     5.5504 |       25.5542 |      7.8081 |    -0.8363 |  0.1049 |           0.3102 |        0.1055 |                -0.0067 |              0.3736 |            1 |             1      |                   1      |
+| frac_fragments_lt1mm |       0.0031 |     0.0048 |        0.0026 |      0.0029 |     0.1106 |  0.8621 |           0.0023 |        0.5812 |                -0.0005 |              0.4388 |            1 |             1      |                   1      |
+| depth_mm             |     158.864  |    15.7069 |      149.599  |     33.5347 |     0.3345 |  0.7984 |           0.0016 |        0.9889 |                -0.0131 |              0.0039 |            1 |             1      |                   0.0351 |
+| spread_mm            |     160.63   |    18.8956 |      150.199  |     27.2001 |     0.4211 |  0.6454 |          -0.0913 |        0.2849 |                 0.0028 |              0.3618 |            1 |             1      |                   1      |
+| hull_area_mm2        |   18978.2    |  2223.33   |    16748.1    |   5294.46   |     0.5193 |  0.4418 |          -0.1327 |        0.4507 |                -0.0071 |              0.1877 |            1 |             1      |                   1      |
+| solidity             |       0.0179 |     0.0038 |        0.0215 |      0.0041 |    -0.844  |  0.2345 |           0.3133 |        0.0048 |                -0.0181 |              0.0052 |            1 |             0.0525 |                   0.0415 |
+| centroid_y_rel       |       0.2734 |     0.0231 |        0.2588 |      0.0453 |     0.3827 |  0.6454 |          -0.0861 |        0.3304 |                 0.0031 |              0.3972 |            1 |             1      |                   1      |
+
+#### T6_xai.md
+| métrica                     | modelo        |    mean |     std |   median |   n_imgs |   acc_imgs |
+|:----------------------------|:--------------|--------:|--------:|---------:|---------:|-----------:|
+| conc_gradcam                | rootcvt       |   3.059 |   2.379 |    3.444 |      140 |      0.55  |
+| conc_ig_black               | rootcvt       | 207.051 | 104.206 |  182.461 |      140 |      0.55  |
+| conc_ig_gray                | rootcvt       |   2.476 |   1.951 |    1.684 |      140 |      0.55  |
+| conc_ig_blur                | rootcvt       | 144.891 |  77.5   |  129.038 |      140 |      0.55  |
+| conc_ig_noise               | rootcvt       |   2.304 |   1.66  |    1.746 |      140 |      0.55  |
+| outside_tokens_frac_gradcam | rootcvt       |   0.233 |   0.19  |    0.208 |      140 |      0.55  |
+| outside_tokens_frac_ig_gray | rootcvt       |   0.085 |   0.02  |    0.088 |      140 |      0.55  |
+| outside_tokens_root_frac    | rootcvt       |   0.123 |   0.111 |    0.099 |      140 |      0.55  |
+| del_auc_gradcam             | rootcvt       |   0.637 |   0.209 |    0.676 |      140 |      0.55  |
+| ins_auc_gradcam             | rootcvt       |   0.644 |   0.219 |    0.669 |      140 |      0.55  |
+| del_auc_random_gradcam      | rootcvt       |   0.669 |   0.208 |    0.701 |      140 |      0.55  |
+| ins_auc_random_gradcam      | rootcvt       |   0.669 |   0.208 |    0.706 |      140 |      0.55  |
+| del_auc_ig_gray             | rootcvt       |   0.394 |   0.265 |    0.343 |      140 |      0.55  |
+| ins_auc_ig_gray             | rootcvt       |   0.848 |   0.155 |    0.894 |      140 |      0.55  |
+| del_auc_random_ig_gray      | rootcvt       |   0.671 |   0.209 |    0.712 |      140 |      0.55  |
+| ins_auc_random_ig_gray      | rootcvt       |   0.669 |   0.206 |    0.689 |      140 |      0.55  |
+| conc_gradcam                | rootcvt_noaug |   1.796 |   2.103 |    0.869 |      140 |      0.564 |
+| conc_ig_black               | rootcvt_noaug | 207.051 | 104.206 |  182.461 |      140 |      0.564 |
+| conc_ig_gray                | rootcvt_noaug |   4.294 |   4.609 |    2.897 |      140 |      0.564 |
+| conc_ig_blur                | rootcvt_noaug | 153.996 |  86.726 |  135.838 |      140 |      0.564 |
+| conc_ig_noise               | rootcvt_noaug |   3.803 |   3.9   |    2.838 |      140 |      0.564 |
+| outside_tokens_frac_gradcam | rootcvt_noaug |   0.23  |   0.202 |    0.204 |      140 |      0.564 |
+| outside_tokens_frac_ig_gray | rootcvt_noaug |   0.071 |   0.018 |    0.073 |      140 |      0.564 |
+| outside_tokens_root_frac    | rootcvt_noaug |   0.123 |   0.111 |    0.099 |      140 |      0.564 |
+| del_auc_gradcam             | rootcvt_noaug |   0.771 |   0.299 |    0.945 |      140 |      0.564 |
+| ins_auc_gradcam             | rootcvt_noaug |   0.798 |   0.253 |    0.944 |      140 |      0.564 |
+| del_auc_random_gradcam      | rootcvt_noaug |   0.784 |   0.28  |    0.947 |      140 |      0.564 |
+| ins_auc_random_gradcam      | rootcvt_noaug |   0.783 |   0.28  |    0.951 |      140 |      0.564 |
+| del_auc_ig_gray             | rootcvt_noaug |   0.479 |   0.392 |    0.421 |      140 |      0.564 |
+| ins_auc_ig_gray             | rootcvt_noaug |   0.948 |   0.104 |    0.979 |      140 |      0.564 |
+| del_auc_random_ig_gray      | rootcvt_noaug |   0.787 |   0.274 |    0.943 |      140 |      0.564 |
+| ins_auc_random_ig_gray      | rootcvt_noaug |   0.785 |   0.276 |    0.953 |      140 |      0.564 |
+| conc_gradcam                | rootcvt_tf211 |   2.471 |   2.139 |    2.095 |      140 |      0.471 |
+| conc_ig_black               | rootcvt_tf211 | 207.051 | 104.206 |  182.461 |      140 |      0.471 |
+| conc_ig_gray                | rootcvt_tf211 |   2.093 |   1.061 |    1.936 |      140 |      0.471 |
+| conc_ig_blur                | rootcvt_tf211 | 142.534 |  76.707 |  124.031 |      140 |      0.471 |
+| conc_ig_noise               | rootcvt_tf211 |   1.763 |   1.107 |    1.447 |      140 |      0.471 |
+| outside_tokens_frac_gradcam | rootcvt_tf211 |   0.256 |   0.175 |    0.248 |      140 |      0.471 |
+| outside_tokens_frac_ig_gray | rootcvt_tf211 |   0.166 |   0.08  |    0.122 |      140 |      0.471 |
+| outside_tokens_root_frac    | rootcvt_tf211 |   0.123 |   0.111 |    0.099 |      140 |      0.471 |
+| del_auc_gradcam             | rootcvt_tf211 |   0.662 |   0.233 |    0.722 |      140 |      0.471 |
+| ins_auc_gradcam             | rootcvt_tf211 |   0.668 |   0.216 |    0.72  |      140 |      0.471 |
+| del_auc_random_gradcam      | rootcvt_tf211 |   0.697 |   0.218 |    0.756 |      140 |      0.471 |
+| ins_auc_random_gradcam      | rootcvt_tf211 |   0.694 |   0.218 |    0.754 |      140 |      0.471 |
+| del_auc_ig_gray             | rootcvt_tf211 |   0.378 |   0.273 |    0.322 |      140 |      0.471 |
+| ins_auc_ig_gray             | rootcvt_tf211 |   0.883 |   0.11  |    0.916 |      140 |      0.471 |
+| del_auc_random_ig_gray      | rootcvt_tf211 |   0.692 |   0.221 |    0.756 |      140 |      0.471 |
+| ins_auc_random_ig_gray      | rootcvt_tf211 |   0.697 |   0.219 |    0.76  |      140 |      0.471 |
+
+#### T6b_randomization.md
+|   stage_frac_layers_randomized | modelo        |   gradcam_spearman_mean |   gradcam_spearman_std |   ig_gray_spearman_mean |   ig_gray_spearman_std |
+|-------------------------------:|:--------------|------------------------:|-----------------------:|------------------------:|-----------------------:|
+|                           0.1  | rootcvt       |                   0.206 |                  0.55  |                   0.651 |                  0.02  |
+|                           0.25 | rootcvt       |                   0.071 |                  0.498 |                   0.652 |                  0.018 |
+|                           0.5  | rootcvt       |                   0.272 |                  0.395 |                   0.662 |                  0.016 |
+|                           0.75 | rootcvt       |                   0.168 |                  0.344 |                   0.656 |                  0.02  |
+|                           1    | rootcvt       |                   0.224 |                  0.314 |                   0.627 |                  0.012 |
+|                           0.1  | rootcvt_noaug |                  -0.138 |                  0.338 |                   0.682 |                  0.026 |
+|                           0.25 | rootcvt_noaug |                  -0.109 |                  0.39  |                   0.677 |                  0.018 |
+|                           0.5  | rootcvt_noaug |                   0.111 |                  0.245 |                   0.657 |                  0.022 |
+|                           0.75 | rootcvt_noaug |                   0.122 |                  0.343 |                   0.671 |                  0.025 |
+|                           1    | rootcvt_noaug |                   0.239 |                  0.406 |                   0.655 |                  0.03  |
+|                           0.1  | rootcvt_tf211 |                   0.659 |                  0.111 |                   0.647 |                  0.021 |
+|                           0.25 | rootcvt_tf211 |                   0.628 |                  0.195 |                   0.649 |                  0.014 |
+|                           0.5  | rootcvt_tf211 |                   0.314 |                  0.149 |                   0.495 |                  0.041 |
+|                           0.75 | rootcvt_tf211 |                  -0.027 |                  0.173 |                   0.515 |                  0.028 |
+|                           1    | rootcvt_tf211 |                   0.006 |                  0.144 |                   0.492 |                  0.044 |

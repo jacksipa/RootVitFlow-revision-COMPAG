@@ -1,6 +1,7 @@
 # Entrega de experimentación — Respuesta a revisores COMPAG-D-26-05203R1
 Cada carpeta corresponde a uno o más comentarios. ✅ = listo, ⏳ = pendiente (la experimentación sigue corriendo o falta insumo).
 Protocolo completo: `03_.../protocolo.md`. Código: `Prueba3/`.
+**Borrador de respuestas a los revisores:** `RESPUESTAS_BORRADOR.md` (esta carpeta).
 
 ## 01_R1-C4_R3-C1_fuga_de_datos
 **Responde a:** R1 Comentario 4; R3 Comentario 1  
@@ -14,8 +15,8 @@ Protocolo completo: `03_.../protocolo.md`. Código: `Prueba3/`.
 ## 02_R1-C5_R3-C1_test_independiente
 **Responde a:** R1 Comentario 5; R3 Comentario 1  
 **Va en el manuscrito:** Sec. 3.6 (holdout), Sec. 4.2.2 (Tabla de resultados principal), Resumen
-- ⏳ `T3_holdout.md` — Tabla: test independiente (4 plantas nunca vistas)
-- ⏳ `T3_holdout.csv` — Igual que arriba, CSV
+- ✅ `T3_holdout.md` — Tabla: test independiente (4 plantas nunca vistas)
+- ✅ `T3_holdout.csv` — Igual que arriba, CSV
 - ✅ `holdout_plants.json` — Plantas del holdout y semilla
 
 ## 03_R1-C6_R3-C7_particiones_metricas_reproducibilidad
@@ -46,12 +47,19 @@ Protocolo completo: `03_.../protocolo.md`. Código: `Prueba3/`.
 ## 06_R1-C7_R3-C4_XAI_cuantitativo
 **Responde a:** R1 Comentario 7; R3 Comentario 4  
 **Va en el manuscrito:** Sec. 3.5 (métodos XAI), Sec. 4.4 (resultados), Sec. 5.4 (discusión)
-- ⏳ `T6_xai.md` — Tabla: concentración en raíz, deletion/insertion, cobertura de tokens
-- ⏳ `T6b_randomization.md` — Tabla: sanity check de randomización en cascada
-- ⏳ `xai_per_image_rootcvt.csv` — Métricas XAI por imagen (todas las imágenes de test)
-- ⏳ `xai_tests_rootcvt.json` — Pruebas de Wilcoxon atribución vs aleatorio
+- ✅ `T6_xai.md` — Tabla: concentración en raíz, deletion/insertion, cobertura de tokens
+- ✅ `T6b_randomization.md` — Tabla: sanity check de randomización en cascada
+- ✅ `xai_per_image_rootcvt.csv` — Métricas XAI por imagen — RootCVT TF 2.21
+- ✅ `xai_per_image_rootcvt_noaug.csv` — Métricas XAI por imagen — RootCVT sin augmentation
+- ✅ `xai_per_image_rootcvt_tf211.csv` — Métricas XAI por imagen — RootCVT TF 2.11 (original)
+- ✅ `xai_tests_rootcvt.json` — Pruebas de Wilcoxon atribución vs aleatorio
 
 ## 07_R1-C3_R3-C3_segmentacion
-**Responde a:** R1 Comentario 3; R3 Comentario 3  
-**Va en el manuscrito:** Sec. 3.2, Sec. 4.1
-- ⏳ Pendiente: se necesitan los códigos/arquitecturas de segmentación (U-Net, SwinUNETR, SAM).
+**Responde a:** R1 Comentario 3; R3 Comentario 3; R1 Comentario 6 (particiones consistentes)  
+**Va en el manuscrito:** Sec. 3.2 (entrenamiento/test de segmentación), Sec. 4.1 (Tabla de segmentación), Fig. 8–9
+- ✅ `T7_segmentation.md` — Tabla: U-Net / SwinUNETR / SAM, mismo test (4 plantas), Dice, IoU, clDice, skeleton-F1
+- ✅ `T7_segmentation.csv` — Igual que arriba, CSV
+- ✅ `test_per_image.csv` — U-Net: métricas por imagen de test
+- ✅ `test_per_image.csv` — SwinUNETR: métricas por imagen de test
+- ✅ `test_per_image.csv` — SAM: métricas por imagen de test
+- ✅ `auditoria_segmentacion.md` — Problemas encontrados en los notebooks originales

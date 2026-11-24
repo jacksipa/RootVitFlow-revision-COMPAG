@@ -1,5 +1,6 @@
 Modelo,n_reps,Accuracy (media ± DE reps),AUC (media ± DE),F1 macro (media ± DE),Accuracy ensemble,IC95% planta,AUC ensemble,Acc. por planta (ensemble)
 "RootCVT (model97, 9 bloques, 4 tokens)",3,41.1 ± 10.6,40.8 ± 17.9,38.4 ± 8.0,30.0,"[10.0, 50.0]",31.3,"{""rb3"": 0.8, ""rb8"": 0.07, ""sb13"": 0.13, ""sb15"": 0.2}"
+RootCVT (model97) entrenado en TF 2.11 (versión original),2,50.0 ± 0.0,48.1 ± 11.1,39.2 ± 4.4,53.3,"[50.0, 56.7]",35.3,"{""rb3"": 0.13, ""rb8"": 0.0, ""sb13"": 1.0, ""sb15"": 1.0}"
 "RootCVT checkpoint-100% (7 bloques, 4 tokens)",3,44.4 ± 24.6,42.2 ± 29.8,42.7 ± 24.8,26.7,"[3.3, 50.0]",20.6,"{""rb3"": 0.47, ""rb8"": 0.07, ""sb13"": 0.53, ""sb15"": 0.0}"
 Sensibilidad: RootCVT sin data augmentation,3,36.1 ± 4.2,35.8 ± 10.9,35.0 ± 3.4,31.7,"[6.7, 56.7]",33.6,"{""rb3"": 0.47, ""rb8"": 0.13, ""sb13"": 0.67, ""sb15"": 0.0}"
 Ablación: backbone CNN+SE sin Transformer,3,31.7 ± 6.0,18.5 ± 0.4,26.5 ± 3.3,26.7,"[13.3, 40.0]",17.4,"{""rb3"": 0.53, ""rb8"": 0.27, ""sb13"": 0.27, ""sb15"": 0.0}"

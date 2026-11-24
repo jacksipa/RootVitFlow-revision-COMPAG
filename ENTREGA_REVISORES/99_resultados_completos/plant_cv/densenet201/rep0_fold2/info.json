@@ -1,0 +1,43 @@
+{
+  "model": "densenet201",
+  "seed": 1236,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 5,
+  "best_val_acc": 0.949999988079071,
+  "final_train_acc": 1.0,
+  "train_time_s": 400.3,
+  "n_params": 18568642,
+  "n_train": 100,
+  "n_val": 20,
+  "n_test": 20,
+  "tf_version": "2.21.0",
+  "scheme": "plant_cv",
+  "rep": 0,
+  "fold": 2,
+  "test_plants": [
+    "rb9",
+    "sb14"
+  ],
+  "val_plants": [
+    "rb10",
+    "sb20"
+  ],
+  "val_acc_best_ckpt": 0.95,
+  "test_metrics": {
+    "accuracy": 0.7,
+    "balanced_accuracy": 0.7,
+    "precision_macro": 0.8125,
+    "recall_macro": 0.7,
+    "f1_macro": 0.6703296703296704,
+    "recall_riego": 0.4,
+    "recall_sequia": 1.0,
+    "auc": 1.0,
+    "tn": 4,
+    "fp": 6,
+    "fn": 0,
+    "tp": 10,
+    "plant_accuracy": 0.5,
+    "n_plants": 2
+  }
+}

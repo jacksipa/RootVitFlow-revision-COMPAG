@@ -9,7 +9,8 @@
 > efecto biológico real en la **dinámica** de crecimiento radicular (interacción tratamiento × día).
 > Recomendación: reenfocar la contribución en segmentación + fenotipado morfométrico, y presentar la clasificación como
 > resultado negativo/limitación honesta. Decidir esto es de ustedes; el texto de abajo está escrito con ese enfoque.
-> Los valores marcados ⟨TF2.11⟩ se completan al cierre (RootCVT entrenado con la versión original de TensorFlow).
+> RootCVT se reporta con TensorFlow 2.11.1 (la versión original del cluster): 96.1% de accuracy en entrenamiento,
+> 45.1 ± 25.5% en CV agrupada por planta y 50.0% en el test independiente.
 > Todas las cifras salen de `ENTREGA_REVISORES/` (tablas T1–T7) y son reproducibles con el código de `Prueba3/`.
 
 ---
@@ -51,8 +52,9 @@ on folds that contained its own training images, without retraining per fold, an
 best of six identically configured runs, with the checkpoint selected on the same test set (the six runs gave 72.5,
 90.0, 80.0, 87.5, 70.0 and 100%). We have therefore re-evaluated RootCVT and all baselines with (a) plant-grouped
 cross-validation and (b) an independent test set of four plants never used for training, validation or model
-selection. Under these conditions RootCVT reached ⟨TF2.11: accuracy CV⟩ in plant-grouped cross-validation and
-⟨TF2.11: holdout⟩ on the independent test set; the CNN baselines obtained 42.5–49.9% (plant-grouped CV) and
+selection. Under these conditions RootCVT (trained in the original TensorFlow 2.11 environment) reached
+45.1 ± 25.5% accuracy (AUC 46.5 ± 29.8%) in plant-grouped cross-validation, despite 96.1% training accuracy, and
+50.0% (AUC 48.1 ± 11.1%) on the independent test set; the CNN baselines obtained 42.5–49.9% (plant-grouped CV) and
 33.3–49.4% (independent test), i.e., none of the classifiers discriminates irrigation treatment above chance on
 unseen plants (Tables T2–T3). The 99% claim has been removed from the Abstract, Results and Conclusions, and the
 classification results are now reported as a limitation of the present dataset (16 plants).
@@ -87,10 +89,11 @@ file (`splits/assignments.csv`) and the random seeds (global seed 1234 + 100·re
 development images, each explained by the model of the fold in which its plant was held out. Results (Table T6):
 (i) with the black baseline used before, Integrated Gradients concentrates attribution on root pixels by
 construction (ratio = 182 = 1/root-pixel fraction), so this result was uninformative; with non-trivial baselines
-(uniform grey, noise) the concentration ratio is 1.7–2.9; (ii) in deletion/insertion tests, Grad-CAM ordering was not
-better than random ordering (deletion AUC 0.68 vs 0.70), whereas IG (grey baseline) was (0.34 vs 0.71;
-Wilcoxon p < 10⁻²⁰); (iii) in the cascading model-parameter randomisation test, Grad-CAM maps decorrelated from the
-original (Spearman ≈ 0.1–0.27), but IG maps remained correlated (≈ 0.63–0.66) even with all layers randomised,
+(uniform grey, noise) the concentration ratio is only 1.4–2.9 (three RootCVT variants); (ii) in deletion/insertion tests, Grad-CAM ordering
+was barely better than random ordering (deletion AUC 0.72 vs 0.76 for RootCVT/TF 2.11; 0.68 vs 0.70 under TF 2.21),
+whereas IG (grey baseline) was clearly better (0.32 vs 0.76; Wilcoxon p < 10⁻²⁰); (iii) in the cascading
+model-parameter randomisation test, Grad-CAM maps decorrelated from the original once ≥ 50% of the layers were
+randomised (Spearman 0.31 → ≈ 0), but IG maps remained correlated (≈ 0.49–0.66) even with all layers randomised,
 indicating that IG mainly reflects the input mask structure; (iv) 9.9% of root pixels fall outside the 2 × 2 token
 grid of the transformer. We have therefore removed the claim that XAI "validates" that the model relies on root
 structures, and report these quantitative results instead.
@@ -123,7 +126,7 @@ recovered from the file names (16 plants, daily images), allowing plant-grouped 
 plants; (ii) RootCVT hyperparameters were fixed a priori (no grid search on the test data); the only selection step
 (checkpoint epoch) uses a separate validation pair of plants; (iii) RootPainter masks are used as reference for all
 images, which we now state explicitly as a limitation (no independent manual annotation). Under this protocol, the
-headline accuracy is not reproduced (⟨TF2.11⟩ plant-grouped CV; ⟨TF2.11⟩ independent test).
+headline accuracy is not reproduced (45.1 ± 25.5% plant-grouped CV; 50.0% independent test; Tables T2–T3).
 
 ### Comment 2 — Performance gap, weak baselines, no ablation, 2 × 2 tokens
 
@@ -132,7 +135,7 @@ replicated to three channels for ImageNet-pretrained CNNs), same augmentation, c
 (cross-entropy, label smoothing 0.08), optimiser (Adam, lr 3·10⁻⁴, weight decay 10⁻³), 150 epochs and checkpoint
 selection on held-out validation plants. Baselines: MobileNetV2, InceptionV3, ResNet50, DenseNet201 (ImageNet). Ablations:
 CNN+SE backbone without transformer, and RootCVT with 49 tokens (patch 4) instead of 4 tokens (patch 11). Results
-(Table T2, plant-grouped CV): RootCVT ⟨TF2.11⟩; backbone without transformer 57.1 ± 15.4%; 49-token RootCVT
+(Table T2, plant-grouped CV): RootCVT 45.1 ± 25.5% (TF 2.11; 46.9 ± 19.4% under TF 2.21); backbone without transformer 57.1 ± 15.4%; 49-token RootCVT
 50.9 ± 22.5%; CNNs 42.5–49.9% (all reach 95–99% training accuracy). The transformer does not improve over the CNN
 backbone, and we confirm the reviewer's observation that the original configuration operates on a 2 × 2 token grid
 (28 × 28 feature map, 11 × 11 patches; 9.9% of root pixels fall outside the tokenised region). The claims about
@@ -184,4 +187,5 @@ absence of comparison with WinRHIZO/RhizoVision as limitations.
 ### Additional reproducibility note (for Section 3.6 / Code availability)
 RootCVT trained with augmentation learns the training set under TensorFlow 2.11 (the original environment) but not
 under TensorFlow 2.21/Keras 2 (tf_keras), on both GPU and CPU; RootCVT results are therefore reported with TF 2.11.1
-(⟨TF2.11⟩), and CNN baselines with TF 2.21. Environment files for both are provided.
+(45.1 ± 25.5% plant-grouped CV, 50.0% independent test), and CNN baselines with TF 2.21. No paired difference between
+RootCVT and any baseline or ablation was significant (Wilcoxon over folds, all p > 0.2; Table T2b). Environment files for both are provided.

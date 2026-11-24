@@ -1,0 +1,45 @@
+{
+  "model": "resnet50",
+  "seed": 1234,
+  "epochs": 150,
+  "reduce_lr": false,
+  "best_epoch": 79,
+  "best_val_acc": 0.6800000071525574,
+  "final_train_acc": 0.895652174949646,
+  "train_time_s": 166.9,
+  "n_params": 23850754,
+  "n_train": 115,
+  "n_val": 25,
+  "n_test": 60,
+  "tf_version": "2.21.0",
+  "scheme": "holdout",
+  "rep": 0,
+  "fold": 0,
+  "test_plants": [
+    "rb3",
+    "rb8",
+    "sb13",
+    "sb15"
+  ],
+  "val_plants": [
+    "rb1",
+    "sb16"
+  ],
+  "val_acc_best_ckpt": 0.68,
+  "test_metrics": {
+    "accuracy": 0.4666666666666667,
+    "balanced_accuracy": 0.4666666666666667,
+    "precision_macro": 0.2413793103448276,
+    "recall_macro": 0.4666666666666667,
+    "f1_macro": 0.3181818181818182,
+    "recall_riego": 0.9333333333333333,
+    "recall_sequia": 0.0,
+    "auc": 0.24,
+    "tn": 28,
+    "fp": 2,
+    "fn": 30,
+    "tp": 0,
+    "plant_accuracy": 0.5,
+    "n_plants": 4
+  }
+}
