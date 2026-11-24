@@ -62,3 +62,4 @@ WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no r
 WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
 WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
 WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+rootcvt_7b 0 test acc (=val, max) = 0.725 best_ep 44 train acc final 0.913

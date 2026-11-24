@@ -42,3 +42,44 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 =============== mobilenetv2 / image_cv  lun 23 nov 2026 18:42:55 -05 ===============
 [SKIP] mobilenetv2/image_cv omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/mobilenetv2_image_cv)
 =============== rootcvt_p4 / plant_cv  lun 23 nov 2026 18:42:55 -05 ===============
+[RUN] rootcvt_p4 plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.300 auc=0.360 best_ep=21 val=0.867 t=190.0s
+[RUN] rootcvt_p4 plant_cv rep0 fold1 seed=1235 train=90 val=20 test=30
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.633 auc=0.729 best_ep=3 val=0.600 t=143.3s
+[RUN] rootcvt_p4 plant_cv rep0 fold2 seed=1236 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.550 auc=0.730 best_ep=29 val=0.800 t=186.2s
+[RUN] rootcvt_p4 plant_cv rep0 fold3 seed=1237 train=95 val=25 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.750 auc=0.660 best_ep=103 val=0.800 t=202.3s
+[RUN] rootcvt_p4 plant_cv rep0 fold4 seed=1238 train=90 val=25 test=25
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7524153c3560> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.400 auc=0.520 best_ep=90 val=0.760 t=194.5s
+[RUN] rootcvt_p4 plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7523c449dbc0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.400 auc=0.100 best_ep=50 val=0.600 t=195.5s
+[RUN] rootcvt_p4 plant_cv rep1 fold0 seed=1334 train=85 val=25 test=30
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.367 auc=0.298 best_ep=43 val=0.560 t=209.9s
+[RUN] rootcvt_p4 plant_cv rep1 fold1 seed=1335 train=95 val=20 test=25
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.600 auc=0.673 best_ep=13 val=1.000 t=282.5s
+[RUN] rootcvt_p4 plant_cv rep1 fold2 seed=1336 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=1.000 auc=1.000 best_ep=115 val=0.850 t=283.1s
+[RUN] rootcvt_p4 plant_cv rep1 fold3 seed=1337 train=100 val=20 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.400 auc=0.420 best_ep=23 val=0.800 t=280.0s
+[RUN] rootcvt_p4 plant_cv rep1 fold4 seed=1338 train=95 val=25 test=20
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.150 auc=0.120 best_ep=91 val=0.720 t=228.8s
+[RUN] rootcvt_p4 plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.560 auc=0.580 best_ep=61 val=0.800 t=205.8s
+=============== rootcvt_p2 / plant_cv  lun 23 nov 2026 19:27:27 -05 ===============
+[SKIP] rootcvt_p2/plant_cv omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/rootcvt_p2_plant_cv)
+=============== rootcvt_p4 / holdout  lun 23 nov 2026 19:27:27 -05 ===============
