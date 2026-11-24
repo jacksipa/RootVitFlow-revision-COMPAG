@@ -113,3 +113,14 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 [SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep1_fold0
 [SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep2_fold0
 =============== resnet50 / holdout  lun 23 nov 2026 20:17:19 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep0_fold0
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep1_fold0 (otra cola la está corriendo)
+[RUN] resnet50 holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+   -> test acc=0.233 auc=0.163 best_ep=82 val=0.960 t=162.0s
+=============== densenet201 / holdout  lun 23 nov 2026 20:20:15 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep1_fold0
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep2_fold0 (otra cola la está corriendo)
+=============== vgg16 / holdout  lun 23 nov 2026 20:20:20 -05 ===============
+[SKIP] vgg16/holdout omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/vgg16_holdout)
+=============== COLA TERMINADA lun 23 nov 2026 20:20:20 -05 ===============

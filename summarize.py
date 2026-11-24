@@ -234,19 +234,31 @@ def main():
         axs[0, 0].legend(frameon=False)
         fig.tight_layout(); fig.savefig(os.path.join(FIG, "F_morpho_temporal.png"), dpi=200); plt.close(fig)
 
-    # ---------- T6 XAI ----------
-    xp = os.path.join(R, "xai", "xai_per_image_rootcvt.csv")
-    if os.path.exists(xp):
+    # ---------- T6 XAI (todos los modelos analizados) ----------
+    parts, rparts = [], []
+    for xp in sorted(glob.glob(os.path.join(R, "xai", "xai_per_image_*.csv"))):
+        mname = os.path.basename(xp)[len("xai_per_image_"):-4]
         X = pd.read_csv(xp)
         cols = [c for c in X.columns if c.startswith(("conc_", "del_", "ins_", "outside_"))]
-        T6 = X[cols].agg(["mean", "std", "median"]).T
-        T6.to_csv(os.path.join(OUT, "T6_xai.csv"))
-        to_md(T6.round(3).reset_index(), os.path.join(OUT, "T6_xai.md"), drop=())
-        rp = os.path.join(R, "xai", "randomization_rootcvt.csv")
+        t = X[cols].agg(["mean", "std", "median"]).T
+        t.insert(0, "modelo", mname)
+        t["n_imgs"] = len(X)
+        t["acc_imgs"] = X.correct.mean()
+        parts.append(t)
+        rp = os.path.join(R, "xai", f"randomization_{mname}.csv")
         if os.path.exists(rp):
             RD = pd.read_csv(rp).groupby("stage_frac_layers_randomized")[["gradcam_spearman", "ig_gray_spearman"]].agg(["mean", "std"])
-            RD.to_csv(os.path.join(OUT, "T6b_randomization.csv"))
-            to_md(RD.round(3).reset_index(), os.path.join(OUT, "T6b_randomization.md"), drop=())
+            RD.columns = ["_".join(c) for c in RD.columns]
+            RD.insert(0, "modelo", mname)
+            rparts.append(RD.reset_index())
+    if parts:
+        T6 = pd.concat(parts)
+        T6.to_csv(os.path.join(OUT, "T6_xai.csv"))
+        to_md(T6.round(3).reset_index().rename(columns={"index": "métrica"}), os.path.join(OUT, "T6_xai.md"), drop=())
+    if rparts:
+        RD = pd.concat(rparts)
+        RD.to_csv(os.path.join(OUT, "T6b_randomization.csv"), index=False)
+        to_md(RD.round(3), os.path.join(OUT, "T6b_randomization.md"), drop=())
 
     print("Tablas en", OUT)
     for f in sorted(glob.glob(os.path.join(OUT, "*.md"))):

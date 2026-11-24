@@ -163,7 +163,8 @@ def randomization_test(model, X, cls, gradcam_fn_maker, ig_maker, rng):
 def main():
     import tensorflow as tf
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="rootcvt")
+    ap.add_argument("--model", default="rootcvt", help="carpeta de resultados en results/plant_cv/")
+    ap.add_argument("--arch", default=None, help="arquitectura (builder) si difiere de --model, p.ej. rootcvt para rootcvt_tf211")
     ap.add_argument("--rep", type=int, default=0)
     ap.add_argument("--max_per_fold", type=int, default=999)
     ap.add_argument("--n_random_test", type=int, default=16)
@@ -181,7 +182,7 @@ def main():
         run = os.path.join(base_dir, fd)
         P = pd.read_csv(os.path.join(run, "preds.csv")).head(args.max_per_fold)
         tf.keras.utils.set_random_seed(0)
-        model = C.build_model(args.model)
+        model = C.build_model(args.arch or args.model)
         model.load_weights(os.path.join(run, "best.weights.h5"))
         gc_fn, gc_layer = make_gradcam_fn(model)
         ig_fn = make_ig_fn(model)

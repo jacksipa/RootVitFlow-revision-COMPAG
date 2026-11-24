@@ -61,7 +61,9 @@ PLAN = {
         "Sec. 3.5 (métodos XAI), Sec. 4.4 (resultados), Sec. 5.4 (discusión)",
         [(f"{T}/T6_xai.md", "Tabla: concentración en raíz, deletion/insertion, cobertura de tokens"),
          (f"{T}/T6b_randomization.md", "Tabla: sanity check de randomización en cascada"),
-         (f"{R}/xai/xai_per_image_rootcvt.csv", "Métricas XAI por imagen (todas las imágenes de test)"),
+         (f"{R}/xai/xai_per_image_rootcvt.csv", "Métricas XAI por imagen — RootCVT TF 2.21"),
+         (f"{R}/xai/xai_per_image_rootcvt_noaug.csv", "Métricas XAI por imagen — RootCVT sin augmentation"),
+         (f"{R}/xai/xai_per_image_rootcvt_tf211.csv", "Métricas XAI por imagen — RootCVT TF 2.11 (original)"),
          (f"{R}/xai/xai_tests_rootcvt.json", "Pruebas de Wilcoxon atribución vs aleatorio")]),
     "07_R1-C3_R3-C3_segmentacion": (
         "R1 Comentario 3; R3 Comentario 3; R1 Comentario 6 (particiones consistentes)",

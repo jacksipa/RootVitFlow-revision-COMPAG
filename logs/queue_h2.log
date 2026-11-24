@@ -17,3 +17,7 @@
    -> test acc=0.300 auc=0.247 best_ep=65 val=0.960 t=161.0s
 [LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep2_fold0 (otra cola la está corriendo)
 =============== densenet201 / holdout  lun 23 nov 2026 20:20:10 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep1_fold0
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/densenet201/rep2_fold0 (otra cola la está corriendo)
+=============== COLA TERMINADA lun 23 nov 2026 20:20:15 -05 ===============

@@ -1,1 +1,20 @@
 =============== densenet201 / holdout  lun 23 nov 2026 20:02:35 -05 ===============
+[RUN] densenet201 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+   -> test acc=0.400 auc=0.473 best_ep=126 val=0.640 t=422.4s
+[RUN] densenet201 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+   -> test acc=0.567 auc=0.512 best_ep=27 val=1.000 t=411.4s
+[RUN] densenet201 holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+   -> test acc=0.517 auc=0.484 best_ep=33 val=1.000 t=389.5s
+=============== resnet50 / holdout  lun 23 nov 2026 20:24:06 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep1_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep2_fold0
+=============== inceptionv3 / holdout  lun 23 nov 2026 20:24:11 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep1_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep2_fold0
+=============== mobilenetv2 / holdout  lun 23 nov 2026 20:24:17 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep1_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep2_fold0
+=============== COLA TERMINADA lun 23 nov 2026 20:24:22 -05 ===============
