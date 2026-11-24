@@ -83,3 +83,15 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 =============== rootcvt_p2 / plant_cv  lun 23 nov 2026 19:27:27 -05 ===============
 [SKIP] rootcvt_p2/plant_cv omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/rootcvt_p2_plant_cv)
 =============== rootcvt_p4 / holdout  lun 23 nov 2026 19:27:27 -05 ===============
+[RUN] rootcvt_p4 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.450 auc=0.389 best_ep=1 val=0.640 t=231.6s
+[RUN] rootcvt_p4 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.333 auc=0.177 best_ep=19 val=0.800 t=186.0s
+[RUN] rootcvt_p4 holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+   -> test acc=0.250 auc=0.154 best_ep=27 val=0.840 t=192.9s
+=============== rootcvt_p2 / holdout  lun 23 nov 2026 19:38:03 -05 ===============
+[SKIP] rootcvt_p2/holdout omitido por prioridad de tiempo (/home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/skip/rootcvt_p2_holdout)
+=============== COLA TERMINADA lun 23 nov 2026 19:38:03 -05 ===============
