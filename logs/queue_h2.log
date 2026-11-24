@@ -1,1 +1,19 @@
 =============== inceptionv3 / holdout  lun 23 nov 2026 20:02:50 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/inceptionv3/rep0_fold0
+[RUN] inceptionv3 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+   -> test acc=0.250 auc=0.111 best_ep=41 val=1.000 t=175.4s
+[RUN] inceptionv3 holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+   -> test acc=0.250 auc=0.259 best_ep=37 val=1.000 t=189.9s
+=============== mobilenetv2 / holdout  lun 23 nov 2026 20:09:24 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep0_fold0
+[RUN] mobilenetv2 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+   -> test acc=0.400 auc=0.384 best_ep=79 val=1.000 t=119.7s
+[RUN] mobilenetv2 holdout rep2 fold0 seed=1434 train=115 val=25 test=60
+   -> test acc=0.167 auc=0.170 best_ep=42 val=1.000 t=156.2s
+=============== resnet50 / holdout  lun 23 nov 2026 20:14:18 -05 ===============
+[RUN] resnet50 holdout rep0 fold0 seed=1234 train=115 val=25 test=60
+   -> test acc=0.467 auc=0.240 best_ep=79 val=0.680 t=166.9s
+[RUN] resnet50 holdout rep1 fold0 seed=1334 train=115 val=25 test=60
+   -> test acc=0.300 auc=0.247 best_ep=65 val=0.960 t=161.0s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/resnet50/rep2_fold0 (otra cola la está corriendo)
+=============== densenet201 / holdout  lun 23 nov 2026 20:20:10 -05 ===============

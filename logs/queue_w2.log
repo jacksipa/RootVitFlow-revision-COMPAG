@@ -38,3 +38,24 @@
 [SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/resnet50/rep1_fold4
 [SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/resnet50/rep1_fold5
 =============== densenet201 / plant_cv  lun 23 nov 2026 19:51:18 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep0_fold1
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep0_fold2
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep0_fold3
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep0_fold4 (otra cola la está corriendo)
+[RUN] densenet201 plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+   -> test acc=0.480 auc=0.573 best_ep=24 val=0.550 t=330.4s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep1_fold0 (otra cola la está corriendo)
+[RUN] densenet201 plant_cv rep1 fold1 seed=1335 train=95 val=20 test=25
+   -> test acc=0.400 auc=0.480 best_ep=35 val=1.000 t=336.4s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep1_fold2 (otra cola la está corriendo)
+[RUN] densenet201 plant_cv rep1 fold3 seed=1337 train=100 val=20 test=20
+   -> test acc=0.400 auc=0.280 best_ep=58 val=0.750 t=392.4s
+[RUN] densenet201 plant_cv rep1 fold4 seed=1338 train=95 val=25 test=20
+   -> test acc=0.350 auc=0.400 best_ep=40 val=0.760 t=347.0s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/densenet201/rep1_fold5 (otra cola la está corriendo)
+=============== mobilenetv2 / holdout  lun 23 nov 2026 20:16:27 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep1_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/mobilenetv2/rep2_fold0
+=============== COLA TERMINADA lun 23 nov 2026 20:16:31 -05 ===============
