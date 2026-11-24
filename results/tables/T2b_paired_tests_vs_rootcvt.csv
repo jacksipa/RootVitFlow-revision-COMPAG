@@ -1,5 +1,5 @@
 modelo,diff_acc_vs_rootcvt_pp,wilcoxon_p,n_pares
-RootCVT (model97) entrenado en TF 2.11 (versión original),-7.499999999999996,,2
+RootCVT (model97) entrenado en TF 2.11 (versión original),-10.333333333333329,0.40625,6
 "RootCVT checkpoint-100% (7 bloques, 4 tokens)",-6.8888888888888875,0.2783203125,12
 Sensibilidad: RootCVT sin data augmentation,11.611111111111112,0.3095703125,12
 Ablación: backbone CNN+SE sin Transformer,10.25,0.2138671875,12

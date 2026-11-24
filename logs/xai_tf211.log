@@ -1,0 +1,50 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795488296.973430 2053445 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795488297.769466 2053445 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold0: 20 imgs (Grad-CAM layer conv2d_18)
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold1: 30 imgs (Grad-CAM layer conv2d_18)
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold2: 20 imgs (Grad-CAM layer conv2d_18)
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold3: 20 imgs (Grad-CAM layer conv2d_18)
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold4: 25 imgs (Grad-CAM layer conv2d_18)
+[INFO] Modelo creado y compilado (AdamW + label smoothing + pos emb dinámico).
+[XAI] rep0_fold5: 25 imgs (Grad-CAM layer conv2d_18)
+correct                                 0        1  all_mean
+conc_gradcam                mean    2.384    2.569       NaN
+                            std     2.094    2.201       NaN
+conc_ig_black               mean  199.060  216.010       NaN
+                            std    76.726  128.280       NaN
+conc_ig_gray                mean    1.985    2.215       NaN
+                            std     1.049    1.068       NaN
+conc_ig_blur                mean  138.605  146.939       NaN
+                            std    54.296   96.096       NaN
+conc_ig_noise               mean    1.701    1.833       NaN
+                            std     1.141    1.072       NaN
+outside_tokens_frac_gradcam mean    0.277    0.233       NaN
+                            std     0.177    0.171       NaN
+outside_tokens_frac_ig_gray mean    0.168    0.165       NaN
+                            std     0.078    0.082       NaN
+outside_tokens_root_frac    mean    0.122    0.124       NaN
+                            std     0.104    0.120       NaN
+del_auc_gradcam             mean    0.678    0.644       NaN
+                            std     0.244    0.220       NaN
+ins_auc_gradcam             mean    0.675    0.661       NaN
+                            std     0.246    0.177       NaN
+del_auc_random_gradcam      mean    0.711    0.681       NaN
+                            std     0.246    0.182       NaN
+ins_auc_random_gradcam      mean    0.703    0.683       NaN
+                            std     0.246    0.182       NaN
+del_auc_ig_gray             mean    0.408    0.343       NaN
+                            std     0.304    0.230       NaN
+ins_auc_ig_gray             mean    0.889    0.875       NaN
+                            std     0.112    0.107       NaN
+del_auc_random_ig_gray      mean    0.710    0.672       NaN
+                            std     0.249    0.185       NaN
+ins_auc_random_ig_gray      mean    0.707    0.686       NaN
+                            std     0.244    0.187       NaN
+{'deletion_gradcam_vs_random': 0.002875464920794707, 'insertion_gradcam_vs_random': 0.0028559955428407494, 'deletion_ig_gray_vs_random': 1.396785753364746e-24, 'insertion_ig_gray_vs_random': 1.0114520744886418e-24}
