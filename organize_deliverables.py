@@ -213,6 +213,10 @@ def main():
             if ok:
                 shutil.copy2(src, d)
             lines.append(f"- {'✅' if ok else '⏳'} `{os.path.basename(src)}` — {desc}\n")
+    draft = os.path.join(R, "audit", "RESPUESTAS_BORRADOR.md")
+    if os.path.exists(draft):
+        shutil.copy2(draft, DEST)
+        lines.insert(3, "**Borrador de respuestas a los revisores:** `RESPUESTAS_BORRADOR.md` (esta carpeta).\n")
     with open(os.path.join(DEST, "README.md"), "w") as fo:
         fo.writelines(lines)
     print(open(os.path.join(DEST, "README.md")).read())
