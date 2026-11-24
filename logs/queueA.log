@@ -80,3 +80,26 @@ WARNING:tensorflow:6 out of the last 11 calls to <function Model.make_predict_fu
 [LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/rootcvt_7b/rep1_fold0 (otra cola la está corriendo)
 [LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/rootcvt_7b/rep2_fold0 (otra cola la está corriendo)
 =============== rootcvt_notransf / plant_cv  lun 23 nov 2026 19:39:49 -05 ===============
+[RUN] rootcvt_notransf plant_cv rep0 fold0 seed=1234 train=90 val=30 test=20
+   -> test acc=0.450 auc=0.410 best_ep=7 val=0.900 t=125.8s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep0_fold1 (otra cola la está corriendo)
+[RUN] rootcvt_notransf plant_cv rep0 fold2 seed=1236 train=100 val=20 test=20
+   -> test acc=0.750 auc=0.690 best_ep=2 val=0.750 t=131.8s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep0_fold3 (otra cola la está corriendo)
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep0_fold4 (otra cola la está corriendo)
+[RUN] rootcvt_notransf plant_cv rep0 fold5 seed=1239 train=95 val=20 test=25
+   -> test acc=0.480 auc=0.713 best_ep=4 val=0.600 t=109.0s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep1_fold0 (otra cola la está corriendo)
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep1_fold1 (otra cola la está corriendo)
+[RUN] rootcvt_notransf plant_cv rep1 fold2 seed=1336 train=100 val=20 test=20
+   -> test acc=0.700 auc=0.880 best_ep=5 val=0.700 t=136.7s
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep1_fold3 (otra cola la está corriendo)
+[LOCKED] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/plant_cv/rootcvt_notransf/rep1_fold4 (otra cola la está corriendo)
+[RUN] rootcvt_notransf plant_cv rep1 fold5 seed=1339 train=85 val=30 test=25
+WARNING:tensorflow:5 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7d4883687060> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+   -> test acc=0.600 auc=0.607 best_ep=53 val=0.667 t=91.2s
+=============== rootcvt_notransf / holdout  lun 23 nov 2026 19:50:08 -05 ===============
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/rootcvt_notransf/rep0_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/rootcvt_notransf/rep1_fold0
+[SKIP] /home/semilleroia/Documentos/raices final /RootVitFlow_Respaldo/RootVitFlow/Arquitectures/Transf_PRO_RiegoSequia/Prueba3/results/holdout/rootcvt_notransf/rep2_fold0
+=============== COLA TERMINADA lun 23 nov 2026 19:50:13 -05 ===============
